@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+._*
+
+# Temporary files and CAD backups
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+*.FCStd1
+*.FCBak
+*.blend1
+*.blend2
+
+# Machine-specific printer instructions
+*.gcode
+*.bgcode
+
+# Local scratch work and caches
+work/
+.cache/
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example

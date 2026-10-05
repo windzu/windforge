@@ -1,0 +1,20 @@
+* text=auto
+
+*.md text eol=lf
+*.scad text eol=lf
+*.py text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# CAD projects, mesh exports, and images are kept intact.
+*.FCStd binary
+*.blend binary
+*.stl binary
+*.3mf binary
+*.step binary
+*.stp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
