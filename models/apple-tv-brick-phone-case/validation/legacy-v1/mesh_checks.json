@@ -1,0 +1,107 @@
+{
+  "rear_white": {
+    "watertight": true,
+    "winding_consistent": true,
+    "removed_degenerate_triangles": 0,
+    "connected_components": 1,
+    "vertices": 6446,
+    "triangles": 12892,
+    "volume_mm3": 53623.43621653642,
+    "bounds_mm": [
+      [
+        -24.0,
+        -1.1102230246251565e-16,
+        -1.1102230246251565e-16
+      ],
+      [
+        24.0,
+        19.700000762939453,
+        162.0
+      ]
+    ]
+  },
+  "front_white": {
+    "watertight": true,
+    "winding_consistent": true,
+    "removed_degenerate_triangles": 0,
+    "connected_components": 1,
+    "vertices": 19798,
+    "triangles": 39604,
+    "volume_mm3": 44426.6433870581,
+    "bounds_mm": [
+      [
+        -24.0,
+        17.700000762939453,
+        0.0
+      ],
+      [
+        24.0,
+        40.0,
+        162.0
+      ]
+    ]
+  },
+  "front_black": {
+    "watertight": true,
+    "winding_consistent": true,
+    "removed_degenerate_triangles": 0,
+    "connected_components": 1,
+    "vertices": 8433,
+    "triangles": 16866,
+    "volume_mm3": 5248.19832347916,
+    "bounds_mm": [
+      [
+        -20.25,
+        24.399999618530273,
+        23.0
+      ],
+      [
+        20.25,
+        37.951358795166016,
+        158.0
+      ]
+    ]
+  },
+  "antenna_black": {
+    "watertight": true,
+    "winding_consistent": true,
+    "removed_degenerate_triangles": 1,
+    "connected_components": 1,
+    "vertices": 2283,
+    "triangles": 4562,
+    "volume_mm3": 3418.4760339911845,
+    "bounds_mm": [
+      [
+        5.5,
+        4.501709461212158,
+        155.0
+      ],
+      [
+        16.5,
+        15.498290061950684,
+        233.0
+      ]
+    ]
+  },
+  "side_button_black": {
+    "watertight": true,
+    "winding_consistent": true,
+    "removed_degenerate_triangles": 0,
+    "connected_components": 1,
+    "vertices": 792,
+    "triangles": 1580,
+    "volume_mm3": 309.92242819426093,
+    "bounds_mm": [
+      [
+        -24.799999237060547,
+        17.649999618530273,
+        108.5
+      ],
+      [
+        -17.850000381469727,
+        22.549999237060547,
+        125.5
+      ]
+    ]
+  }
+}

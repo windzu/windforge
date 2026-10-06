@@ -1,0 +1,172 @@
+{
+  "rear_white_outside_down": {
+    "seconds": 5275.39208984375,
+    "grams": 48.58447265625,
+    "feature_times": {
+      "Bottom surface": 176.7322235107422,
+      "Bridge": 432.09002685546875,
+      "Custom": 361.9017028808594,
+      "Flush": 29.0,
+      "Gap infill": 104.84505462646484,
+      "Inner wall": 858.724853515625,
+      "Internal solid infill": 813.7884521484375,
+      "Outer wall": 778.4847412109375,
+      "Overhang wall": 11.988123893737793,
+      "Sparse infill": 664.7363891601562,
+      "Support": 145.81466674804688,
+      "Support interface": 92.90949249267578,
+      "Support transition": 69.8438720703125,
+      "Top surface": 219.13348388671875,
+      "Travel": 530.6732788085938,
+      "Undefined": 515.6151733398438
+    },
+    "warnings": "",
+    "gcode_summary": [
+      "; total layer number: 159",
+      "; total filament length [mm] : 16031.01",
+      "; total filament volume [cm^3] : 38559.10",
+      "; total filament weight [g] : 48.58"
+    ]
+  },
+  "rear_white_inside_down": {
+    "seconds": 7466.23779296875,
+    "grams": 66.84356689453125,
+    "feature_times": {
+      "Bridge": 570.6436767578125,
+      "Custom": 362.5047302246094,
+      "Flush": 29.0,
+      "Gap infill": 98.13390350341797,
+      "Inner wall": 821.7725830078125,
+      "Internal solid infill": 854.78076171875,
+      "Outer wall": 737.5527954101562,
+      "Overhang wall": 301.4459533691406,
+      "Sparse infill": 677.0884399414062,
+      "Support": 1663.7093505859375,
+      "Support interface": 313.8314208984375,
+      "Support transition": 217.48243713378906,
+      "Top surface": 198.69850158691406,
+      "Travel": 635.5507202148438,
+      "Undefined": 619.8516845703125
+    },
+    "warnings": "",
+    "gcode_summary": [
+      "; total layer number: 173",
+      "; total filament length [mm] : 22055.81",
+      "; total filament volume [cm^3] : 53050.45",
+      "; total filament weight [g] : 66.84"
+    ]
+  },
+  "front_white_outside_down": {
+    "seconds": 4941.880859375,
+    "grams": 36.35148620605469,
+    "feature_times": {
+      "Bottom surface": 31.734235763549805,
+      "Bridge": 235.3262481689453,
+      "Custom": 361.8718566894531,
+      "Flush": 29.0,
+      "Gap infill": 74.05722045898438,
+      "Inner wall": 584.634033203125,
+      "Internal solid infill": 398.43218994140625,
+      "Outer wall": 878.8506469726562,
+      "Overhang wall": 234.8289794921875,
+      "Sparse infill": 689.105712890625,
+      "Support": 640.7936401367188,
+      "Support interface": 126.86133575439453,
+      "Support transition": 71.17945098876953,
+      "Top surface": 166.64434814453125,
+      "Travel": 433.4186706542969,
+      "Undefined": 418.4493713378906
+    },
+    "warnings": "",
+    "gcode_summary": [
+      "; total layer number: 220",
+      "; total filament length [mm] : 11994.60",
+      "; total filament volume [cm^3] : 28850.39",
+      "; total filament weight [g] : 36.35"
+    ]
+  },
+  "front_white_inside_down": {
+    "seconds": 4229.73388671875,
+    "grams": 34.08283996582031,
+    "feature_times": {
+      "Bottom surface": 17.615785598754883,
+      "Bridge": 275.4317626953125,
+      "Custom": 361.8597106933594,
+      "Flush": 29.0,
+      "Gap infill": 81.37702178955078,
+      "Inner wall": 605.075927734375,
+      "Internal solid infill": 456.7485656738281,
+      "Outer wall": 519.7308959960938,
+      "Overhang wall": 56.60770797729492,
+      "Sparse infill": 670.6823120117188,
+      "Support": 386.55438232421875,
+      "Support interface": 120.23445129394531,
+      "Support transition": 75.7247543334961,
+      "Top surface": 120.22412109375,
+      "Travel": 468.1307067871094,
+      "Undefined": 453.05523681640625
+    },
+    "warnings": "",
+    "gcode_summary": [
+      "; total layer number: 169",
+      "; total filament length [mm] : 11246.03",
+      "; total filament volume [cm^3] : 27049.87",
+      "; total filament weight [g] : 34.08"
+    ]
+  },
+  "front_black_outside_down": {
+    "seconds": 2969.22509765625,
+    "grams": 11.985091209411621,
+    "feature_times": {
+      "Bridge": 37.23872375488281,
+      "Brim": 82.02716064453125,
+      "Custom": 362.3865661621094,
+      "Flush": 29.0,
+      "Gap infill": 73.05545043945312,
+      "Inner wall": 280.9635314941406,
+      "Internal solid infill": 122.16680908203125,
+      "Outer wall": 500.84747314453125,
+      "Overhang wall": 236.56723022460938,
+      "Support": 544.3790283203125,
+      "Support interface": 137.90858459472656,
+      "Support transition": 51.65215301513672,
+      "Top surface": 78.30805969238281,
+      "Travel": 448.6005554199219,
+      "Undefined": 433.0336608886719
+    },
+    "warnings": "",
+    "gcode_summary": [
+      "; total layer number: 146",
+      "; total filament length [mm] : 3954.62",
+      "; total filament volume [cm^3] : 9511.98",
+      "; total filament weight [g] : 11.99"
+    ]
+  },
+  "front_black_inside_down": {
+    "seconds": 2367.902587890625,
+    "grams": 8.0449857711792,
+    "feature_times": {
+      "Bridge": 38.52787399291992,
+      "Custom": 361.9696044921875,
+      "Flush": 29.0,
+      "Gap infill": 77.19068908691406,
+      "Inner wall": 297.4627685546875,
+      "Internal solid infill": 126.34458923339844,
+      "Outer wall": 510.99383544921875,
+      "Overhang wall": 243.87376403808594,
+      "Support": 141.69540405273438,
+      "Support interface": 69.89104461669922,
+      "Support transition": 23.7042236328125,
+      "Top surface": 79.70073699951172,
+      "Travel": 382.7358703613281,
+      "Undefined": 367.60504150390625
+    },
+    "warnings": "",
+    "gcode_summary": [
+      "; total layer number: 122",
+      "; total filament length [mm] : 2654.54",
+      "; total filament volume [cm^3] : 6384.91",
+      "; total filament weight [g] : 8.04"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "white": {
+    "seconds": 9092.927734375,
+    "grams": 82.57867431640625,
+    "objects": [
+      "front_white",
+      "rear_white"
+    ],
+    "filament_changes": 0,
+    "warnings": ""
+  },
+  "black": {
+    "seconds": 4071.410888671875,
+    "grams": 11.508752822875977,
+    "objects": [
+      "antenna_black",
+      "front_black",
+      "side_button_black"
+    ],
+    "filament_changes": 0,
+    "warnings": ""
+  }
+}

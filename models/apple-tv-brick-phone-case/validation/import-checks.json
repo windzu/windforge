@@ -1,0 +1,176 @@
+{
+  "checked_date": "2026-10-06",
+  "geometry_modified": false,
+  "verified_import_files": 95,
+  "meshes": {
+    "exports/v2/antenna_black_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 4562,
+      "volume_mm3": 3418.4759932619577,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          11.0,
+          10.996580123901367,
+          78.0
+        ]
+      ]
+    },
+    "exports/v2/fit-tests/length_gauge_136.5mm_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 468,
+      "volume_mm3": 5622.225783351288,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          26.0,
+          141.75,
+          5.149999618530273
+        ]
+      ]
+    },
+    "exports/v2/fit-tests/panel_pin_coupon_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 826,
+      "volume_mm3": 166.57438164418326,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          11.0,
+          5.404253005981445
+        ]
+      ]
+    },
+    "exports/v2/fit-tests/panel_socket_coupon_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 610,
+      "volume_mm3": 176.081468249523,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          11.0,
+          4.473360061645508
+        ]
+      ]
+    },
+    "exports/v2/front_black_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 17740,
+      "volume_mm3": 5262.5367983000815,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          40.5,
+          135.0,
+          13.70425033569336
+        ]
+      ]
+    },
+    "exports/v2/front_white_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 42566,
+      "volume_mm3": 44123.54696370992,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          162.0,
+          22.299999237060547
+        ]
+      ]
+    },
+    "exports/v2/rear_white_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 12924,
+      "volume_mm3": 54047.93641171017,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          162.0,
+          19.700000762939453
+        ]
+      ]
+    },
+    "exports/v2/side_button_black_bed.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_components": 1,
+      "triangles": 1580,
+      "volume_mm3": 309.92242819426093,
+      "bounds_mm": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          4.899999618530273,
+          17.0,
+          6.94999885559082
+        ]
+      ]
+    }
+  },
+  "generic_3mf": {
+    "exports/v2/fit-tests/plate_fit_tests.3mf": {
+      "unit": "millimeter",
+      "build_items": 3,
+      "contains_gcode": false
+    },
+    "exports/v2/plate_black.3mf": {
+      "unit": "millimeter",
+      "build_items": 3,
+      "contains_gcode": false
+    },
+    "exports/v2/plate_white.3mf": {
+      "unit": "millimeter",
+      "build_items": 2,
+      "contains_gcode": false
+    }
+  }
+}

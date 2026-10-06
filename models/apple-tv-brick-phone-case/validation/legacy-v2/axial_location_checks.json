@@ -1,0 +1,47 @@
+[
+  {
+    "remote_shift_mm": -0.5,
+    "overlap_mm3": 9.204624576583878,
+    "expected": "blocked by end stop"
+  },
+  {
+    "remote_shift_mm": -0.3,
+    "overlap_mm3": 1.6797976729718513,
+    "expected": "blocked by end stop"
+  },
+  {
+    "remote_shift_mm": -0.25,
+    "overlap_mm3": 0.0,
+    "expected": "clear"
+  },
+  {
+    "remote_shift_mm": -0.2,
+    "overlap_mm3": 0.0,
+    "expected": "clear"
+  },
+  {
+    "remote_shift_mm": 0,
+    "overlap_mm3": 0.0,
+    "expected": "clear"
+  },
+  {
+    "remote_shift_mm": 0.2,
+    "overlap_mm3": 0.0,
+    "expected": "clear"
+  },
+  {
+    "remote_shift_mm": 0.25,
+    "overlap_mm3": 0.0,
+    "expected": "clear"
+  },
+  {
+    "remote_shift_mm": 0.3,
+    "overlap_mm3": 1.2250000000002783,
+    "expected": "blocked by end stop"
+  },
+  {
+    "remote_shift_mm": 0.5,
+    "overlap_mm3": 6.124999999999998,
+    "expected": "blocked by end stop"
+  }
+]

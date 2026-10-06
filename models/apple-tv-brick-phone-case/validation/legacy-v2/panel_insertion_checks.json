@@ -1,0 +1,42 @@
+[
+  {
+    "withdrawal_y": 0,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 0.25,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 0.5,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 1,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 2,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 3,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 5,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 10,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 20,
+    "overlap_mm3": 0.0
+  },
+  {
+    "withdrawal_y": 30,
+    "overlap_mm3": 0.0
+  }
+]

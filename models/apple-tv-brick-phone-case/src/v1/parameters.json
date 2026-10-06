@@ -1,0 +1,23 @@
+{
+  "width": 48.0,
+  "body_height": 162.0,
+  "max_depth": 40.0,
+  "seam_back": 17.5,
+  "seam_front": 17.7,
+  "remote_back": 14.7,
+  "remote_front": 23.9,
+  "remote_bottom": 8.0,
+  "remote_top": 144.0,
+  "magnet_diameter": 4.2,
+  "magnet_depth": 2.15,
+  "magnet_nominal": "4 x 2 mm",
+  "rail_side_clearance": 0.25,
+  "rail_vertical_clearance": 0.25,
+  "rail_slide": 5.0,
+  "antenna_height": 71.0,
+  "antenna_x": -11.0,
+  "antenna_y": 10.0,
+  "window_width": 34.4,
+  "window_height": 89.5,
+  "export_coordinate_note": "Z up; front viewed from +Y; image-left is world +X. Construction X is mirrored at export."
+}

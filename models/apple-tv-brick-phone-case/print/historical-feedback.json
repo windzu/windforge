@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-09-05T22:51:03.357863+08:00",
+  "scope": "V2 fit tests only",
+  "printer": "P1S 0.4",
+  "filament": "A3 white PLA",
+  "v2_fit_feedback": {
+    "length": "贴合",
+    "panel_pin_socket": "可以顺利装合",
+    "full_print_authorized": true
+  },
+  "white_plate": {
+    "status": "completed",
+    "confirmed_by_user": true,
+    "device_layers": "203/203"
+  },
+  "black_plate": {
+    "observed_at": "2026-09-06T07:08:04.509264+08:00",
+    "status": "accepted and heating bed",
+    "job": "V2_black.gcode",
+    "filament": "AMS A2 black PLA",
+    "estimated_seconds": 4072,
+    "estimated_grams": 11.52,
+    "layers": "0/558",
+    "estimated_finish_local": "2026-09-06 08:14 Asia/Shanghai",
+    "bed_clear_confirmed_by_user": true
+  },
+  "note": "Historical evidence. A print job accepted by the printer does not establish completion; final assembly feedback is pending."
+}

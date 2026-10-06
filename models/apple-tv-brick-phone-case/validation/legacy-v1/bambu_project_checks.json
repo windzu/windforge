@@ -1,0 +1,37 @@
+{
+  "printer_assumption": "Bambu Lab P1S 0.4 nozzle — based on locally saved preset, confirm before printing",
+  "layer_height": "0.16",
+  "colour_assignments": [
+    {
+      "object": "Front — WHITE + BLACK together",
+      "part": "front_white",
+      "filament": 1
+    },
+    {
+      "object": "Front — WHITE + BLACK together",
+      "part": "front_black",
+      "filament": 2
+    },
+    {
+      "object": "Rear",
+      "part": "Rear",
+      "filament": 1
+    },
+    {
+      "object": "Antenna",
+      "part": "Antenna",
+      "filament": 2
+    },
+    {
+      "object": "Side button",
+      "part": "Side button",
+      "filament": 2
+    }
+  ],
+  "filament_colours": [
+    "#D1D4D1",
+    "#202525"
+  ],
+  "support": "1",
+  "physical_print_sent": false
+}

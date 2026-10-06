@@ -1,0 +1,238 @@
+[
+  {
+    "a": "rear_white",
+    "b": "front_white",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "rear_white",
+    "b": "front_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "rear_white",
+    "b": "antenna_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "rear_white",
+    "b": "side_button_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "front_white",
+    "b": "front_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "front_white",
+    "b": "antenna_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "front_white",
+    "b": "side_button_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "front_black",
+    "b": "antenna_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "front_black",
+    "b": "side_button_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "antenna_black",
+    "b": "side_button_black",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "rear_white",
+    "b": "remote",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "front_white",
+    "b": "remote",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "front_black",
+    "b": "remote",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "antenna_black",
+    "b": "remote",
+    "overlap_mm3": 0.0
+  },
+  {
+    "a": "side_button_black",
+    "b": "remote",
+    "overlap_mm3": 0.0
+  },
+  {
+    "slide_z": -5,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": -4,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": -3,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": -2,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": -1,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": 0,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": 1,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": 2,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": 3,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": 4,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "slide_z": 5,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0,
+    "button_overlap_mm3": 0.0,
+    "button_rear_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": -5,
+    "loading_y": 0,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": -5,
+    "loading_y": 0.5,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": -5,
+    "loading_y": 1,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": -5,
+    "loading_y": 1.5,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": -5,
+    "loading_y": 2,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": -5,
+    "loading_y": 3,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": -5,
+    "loading_y": 4,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": 5,
+    "loading_y": 0,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": 5,
+    "loading_y": 0.5,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": 5,
+    "loading_y": 1,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": 5,
+    "loading_y": 1.5,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": 5,
+    "loading_y": 2,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": 5,
+    "loading_y": 3,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  },
+  {
+    "loading_z": 5,
+    "loading_y": 4,
+    "rear_overlap_mm3": 0.0,
+    "remote_overlap_mm3": 0.0
+  }
+]

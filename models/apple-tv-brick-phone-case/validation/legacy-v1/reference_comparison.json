@@ -1,0 +1,23 @@
+{
+  "FRONT": {
+    "silhouette_iou": 0.9900379506641366,
+    "median_boundary_distance_mm": 0.0,
+    "p95_boundary_distance_mm": 0.5078369905956113,
+    "max_boundary_distance_mm": 0.9155161545849,
+    "note": "Image-space estimate versus thresholded marketing reference; not full-surface metrology or fit verification."
+  },
+  "BACK": {
+    "silhouette_iou": 0.9859376792200344,
+    "median_boundary_distance_mm": 0.25391849529780564,
+    "p95_boundary_distance_mm": 0.5078369905956113,
+    "max_boundary_distance_mm": 1.0156739811912225,
+    "note": "Image-space estimate versus thresholded marketing reference; not full-surface metrology or fit verification."
+  },
+  "SIDE": {
+    "silhouette_iou": 0.9734468315702722,
+    "median_boundary_distance_mm": 0.25391849529780564,
+    "p95_boundary_distance_mm": 0.7617554858934169,
+    "max_boundary_distance_mm": 1.4363799191501028,
+    "note": "Image-space estimate versus thresholded marketing reference; not full-surface metrology or fit verification."
+  }
+}

@@ -23,6 +23,8 @@ work/
 __pycache__/
 *.py[cod]
 .venv/
+dist/
+*.gcode.3mf
 
 # Local credentials and configuration
 .env

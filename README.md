@@ -2,7 +2,9 @@
 
 **Wind 的造物工坊。把想法设计成模型，再把模型打印成实物。**
 
-WindForge 是 Wind 的个人 3D 模型设计与打印仓库，用于积累原创作品，并与 AI 协同完成从需求、建模、迭代到实物验证和 MakerWorld 发布的全过程。
+WindForge 是 Wind 的个人 3D 模型设计与打印仓库，用于积累作品，并与 AI 协同完成从需求、建模、迭代到实物验证和 MakerWorld 发布的全过程。
+
+[浏览作品站](https://windzu.github.io/windforge/) · [发布流程](docs/publishing.md)
 
 ## 为什么建立这个仓库
 
@@ -26,6 +28,8 @@ WindForge 是 Wind 的个人 3D 模型设计与打印仓库，用于积累原创
 | `templates/model/README.md` | 新模型的需求、设计、打印与发布记录模板 |
 | `docs/workflow.md` | 从开始设计到发布 MakerWorld 的协作流程 |
 | `AGENTS.md` | AI 在本仓库工作时需要遵循的项目背景与协作约定 |
+| `site/`、`tools/build_site.py` | 作品展示界面与静态网站生成器 |
+| `.github/workflows/pages.yml` | 更新 main 后自动部署 GitHub Pages |
 
 模型目录使用简短的英文小写名称，以连字符分隔。按需在模型目录中建立 `src/`、`exports/`、`images/` 和 `print/`，分别存放可编辑源文件、可打印导出文件、预览与实拍、切片项目及打印记录。
 
@@ -43,7 +47,11 @@ WindForge 是 Wind 的个人 3D 模型设计与打印仓库，用于积累原创
 
 ## 模型目录
 
-目前尚未加入模型。第一个作品完成后，在这里添加其名称、用途、验证状态和模型目录链接；发布后补充 MakerWorld 链接。
+| 作品 | 默认版本 | 验证状态 | MakerWorld |
+| --- | --- | --- | --- |
+| [Apple TV 大哥大遥控器外壳](models/apple-tv-brick-phone-case/) | v2；保留 v1 迭代 | 几何与局部试件通过，白盘完成；整机反馈待补充 | 全球站发布准备中 |
+
+网站默认展示最新版本；仓库保留有价值的历史工程、问题、改动与实物反馈。作品许可在各模型目录中说明；本模型为 CC BY-NC 4.0，允许署名修改，禁止商用。第三方网站组件保留其原许可。
 
 ---
 

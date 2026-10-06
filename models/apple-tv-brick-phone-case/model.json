@@ -1,0 +1,107 @@
+{
+  "slug": "apple-tv-brick-phone-case",
+  "title": "大哥大遥控器外壳",
+  "subtitle": "给日常遥控器，换一副复古面孔。",
+  "english_title": "Brick Phone Remote Case",
+  "number": "001",
+  "version": "v2",
+  "design_date": "2026-09-05",
+  "import_date": "2026-10-06",
+  "category": "日常物件",
+  "summary": "适配 Lightning 版 Siri Remote 第二代。黑白分件、滑轨合壳与磁吸定位，把熟悉的遥控器装进复古大哥大的轮廓里。",
+  "compatibility": "Siri Remote 第二代 · Lightning",
+  "dimensions": "48 × 40 × 233 mm",
+  "body_dimensions": "48 × 40 × 162 mm",
+  "part_count": 5,
+  "material": "PLA · 黑 / 白",
+  "hardware": "D4 × 2 mm 圆片磁铁 × 8",
+  "status": "待完成整机验证",
+  "validation": {
+    "geometry": "历史 CAD 配合检查通过；导入后网格与单位核对通过",
+    "fit_tests": "长度定位、面板柱孔试件已通过",
+    "white_plate": "已完成，用户确认",
+    "black_plate": "已发起打印；完成情况待补充",
+    "assembly": "完整装配反馈待补充"
+  },
+  "printing": {
+    "printer": "Bambu Lab P1S",
+    "nozzle": "0.4 mm",
+    "layer_height": "0.16 mm",
+    "walls": 3,
+    "infill": "15% Gyroid",
+    "support": "普通自动支撑；局部倒扣和定位柱需要清理",
+    "estimated_time": "约 3 小时 39 分",
+    "estimated_filament": "约 94 g",
+    "note": "两盘切片估计；实际时长与耗材未记录。通用 3MF 不包含打印机配置，需重新切片。"
+  },
+  "features": [
+    {
+      "title": "分色，也分件。",
+      "text": "后壳和前框用白色；面板、天线与侧键用黑色。两盘分别打印，单色打印机也能完成黑白组合。"
+    },
+    {
+      "title": "滑合后，磁吸定位。",
+      "text": "前后壳错位合入后沿短滑轨对齐，四对磁铁负责定位。面板用隐藏定位柱落座，再在承托面少量点胶。"
+    },
+    {
+      "title": "把操作区留出来。",
+      "text": "正面保留按键窗口，底部留出 Lightning 充电空间。完整装配后的操作手感与接口适配仍需记录验证。"
+    }
+  ],
+  "assembly_steps": [
+    "清理支撑，先试合黑面板与白前框，确认定位柱入孔、外圈落座。",
+    "在面板隐藏承托面少量点胶，待固化后再放入遥控器；避免胶进入窗口、侧键孔和滑轨。",
+    "安装侧键、天线和八颗磁铁。固定前逐对确认极性，让四对磁铁相吸。",
+    "把遥控器放入后壳定位处，前框错位合入、滑到对齐，再检查按键、充电和装取。"
+  ],
+  "images": {
+    "hero": "images/04_front_perspective.png",
+    "parts": "images/09_v2_separate_parts.png",
+    "type": "模型渲染图"
+  },
+  "release": {
+    "published": false,
+    "makerworld_url": null,
+    "published_date": null,
+    "license": "CC BY-NC 4.0",
+    "reference_source": "外观参照用户提供的商品照片重建；内部配合结构由本工程实现。原商品出处未记录。",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "publication_authorized": true,
+    "platform": "MakerWorld Global",
+    "version": null,
+    "status": "prepared",
+    "makerworld_china_url": null
+  },
+  "versions": [
+    {
+      "version": "v2",
+      "date": "2026-09-05",
+      "title": "长轴限位、独立面板与分盘打印",
+      "changes": "新增 136.5 mm 长轴定位间距；黑面板改为定位柱加胶的独立件。逐件比较打印朝向，黑白分两盘，无需 AMS 换色。",
+      "validation": "长度和面板柱孔试件通过；白色盘完成，黑色盘与完整装配结果待补充。",
+      "files": "src/v2/"
+    },
+    {
+      "version": "v1",
+      "date": "2026-09-05",
+      "title": "首版滑轨合壳与双色前框",
+      "changes": "滑轨试件实测顺滑。实物反馈显示遥控器长度方向偏松；内腔朝下的排版产生大量支撑，推动第二版改动。",
+      "validation": "滑轨配合通过；整壳发送记录保留。前框为双色组合，切片估计约 8 小时 16 分 / 166.33 g。",
+      "files": "src/v1/"
+    }
+  ],
+  "lessons": [
+    {
+      "title": "不碰撞，还要定位可靠。",
+      "text": "参考包络正确，仍可能因缺少端部限位而窜动。之后的配合检查同时覆盖自由行程、端部阻挡和装取路径。"
+    },
+    {
+      "title": "打印朝向逐件比较。",
+      "text": "后壳内腔朝上减少支撑；前框与面板的曲面不同，不能统一翻面。记录每种朝向的支撑、时间和材料代价。"
+    },
+    {
+      "title": "固定件随运动一起检查。",
+      "text": "定位柱初次设计侵入遥控器包络，缩短后通过检查。新增固定结构要检查整个滑动与装入路径。"
+    }
+  ]
+}

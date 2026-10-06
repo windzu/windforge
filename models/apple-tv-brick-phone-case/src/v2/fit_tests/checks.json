@@ -1,0 +1,14 @@
+{
+  "length_gauge_136.5mm": {
+    "valid": true,
+    "volume_mm3": 5622.222213157658
+  },
+  "panel_socket_coupon": {
+    "valid": true,
+    "volume_mm3": 175.89611757269225
+  },
+  "panel_pin_coupon": {
+    "valid": true,
+    "volume_mm3": 166.54383936064087
+  }
+}

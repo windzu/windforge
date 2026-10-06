@@ -1,0 +1,44 @@
+{
+  "status": "local slicing completed; no print sent",
+  "slicer": "BambuStudio 02.08.02.60",
+  "printer_assumption": "P1S 0.4 mm",
+  "layer_height_mm": 0.16,
+  "estimated_seconds": 29721,
+  "estimated_total_g": 169.6,
+  "support_used": "true",
+  "outside": "false",
+  "filaments": [
+    {
+      "id": "1",
+      "tray_info_idx": "GFA00",
+      "type": "PLA",
+      "color": "#D1D4D1",
+      "used_m": "42.95",
+      "used_g": "130.17",
+      "group_id": "0",
+      "nozzle_diameter": "0.40",
+      "volume_type": "Standard",
+      "used_for_object": "true",
+      "used_for_support": "true",
+      "total_load_time": "2030.00",
+      "total_unload_time": "1960.00"
+    },
+    {
+      "id": "2",
+      "tray_info_idx": "GFA00",
+      "type": "PLA",
+      "color": "#202525",
+      "used_m": "13.01",
+      "used_g": "39.43",
+      "group_id": "0",
+      "nozzle_diameter": "0.40",
+      "volume_type": "Standard",
+      "used_for_object": "true",
+      "used_for_support": "true",
+      "total_load_time": "2030.00",
+      "total_unload_time": "1932.00"
+    }
+  ],
+  "delivered_gcode": false,
+  "historical_only": "Old full-shell estimate before P1S template/bed correction; reslice before full print."
+}

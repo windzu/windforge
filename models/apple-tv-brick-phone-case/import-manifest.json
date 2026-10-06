@@ -1,0 +1,618 @@
+{
+  "model": "apple-tv-brick-phone-case",
+  "source_version": "v2 / 2026-09-05",
+  "import_date": "2026-10-06",
+  "source_package": "apple-tv-retro-replica-v2",
+  "geometry_modified": false,
+  "files": [
+    {
+      "original": "retro_remote_replica.blend",
+      "destination": "src/v2/retro_remote_replica.blend",
+      "bytes": 1787193,
+      "sha256": "c26568c645c91d734fae7e9386c69b19982603b8868ac48384d9d03b6db37b14"
+    },
+    {
+      "original": "retro_remote_assembly.step",
+      "destination": "src/v2/retro_remote_assembly.step",
+      "bytes": 3644287,
+      "sha256": "25efeb6d9164392df71fc0ec3dfd3bd98db2013f729e8a0c06e1c0c0a35ea76b"
+    },
+    {
+      "original": "parameters.json",
+      "destination": "src/v2/parameters.json",
+      "bytes": 1053,
+      "sha256": "93a1ced70dbf281769fa0b15fbb75fbacef351c86163c903403ec173ae4bab49"
+    },
+    {
+      "original": "assembly_multicolor.3mf",
+      "destination": "src/v2/assembly_multicolor.3mf",
+      "bytes": 849115,
+      "sha256": "4d622f05c4f7bad5c59c6760db45846073ab3bc68ae59bc47d2eef03aff40ad3"
+    },
+    {
+      "original": "parts/REFERENCE_remote_DO_NOT_PRINT.stl",
+      "destination": "src/v2/parts/REFERENCE_remote_DO_NOT_PRINT.stl",
+      "bytes": 22284,
+      "sha256": "78b4a302d35cf0c562c5008c4d252dcb073516e40e06e563458cbdb9055c2025"
+    },
+    {
+      "original": "parts/antenna_black.step",
+      "destination": "src/v2/parts/antenna_black.step",
+      "bytes": 25700,
+      "sha256": "c2d58f3aaf2bdf66bc1dd522f27f9e1a35afdf2f28bb6144cf7c287b8877e169"
+    },
+    {
+      "original": "parts/antenna_black.stl",
+      "destination": "src/v2/parts/antenna_black.stl",
+      "bytes": 228184,
+      "sha256": "63f81de7e7bedfb5f0e67e5e4c3ff22dc5e0f6c50145aa672dc0d495b81846e3"
+    },
+    {
+      "original": "parts/front_black.step",
+      "destination": "src/v2/parts/front_black.step",
+      "bytes": 794123,
+      "sha256": "c6b8d8f8ba52722ff49db7661622fa0b2d2686369aa28418e74d8be08adf6962"
+    },
+    {
+      "original": "parts/front_black.stl",
+      "destination": "src/v2/parts/front_black.stl",
+      "bytes": 887084,
+      "sha256": "112e71ec84aaa082090e8584a2098fa32019287ff8219950d8ca6fb325c3c3f2"
+    },
+    {
+      "original": "parts/front_white.step",
+      "destination": "src/v2/parts/front_white.step",
+      "bytes": 1736342,
+      "sha256": "57a50b9a623706c1cd8caa664541c67dd2f79ff367f1365736acbeaa67a17c4f"
+    },
+    {
+      "original": "parts/front_white.stl",
+      "destination": "src/v2/parts/front_white.stl",
+      "bytes": 2128384,
+      "sha256": "b5025cfeb2441084fb9fbbefa7c5c333375e12ed20257905839ba7c493f87e0f"
+    },
+    {
+      "original": "parts/rail_coupon_front.stl",
+      "destination": "src/v2/parts/rail_coupon_front.stl",
+      "bytes": 6284,
+      "sha256": "4f01a99f23b1990f6cd9bcab4909c0602e10d56b543ccb50f9954ceefbd8f32b"
+    },
+    {
+      "original": "parts/rail_coupon_rear.stl",
+      "destination": "src/v2/parts/rail_coupon_rear.stl",
+      "bytes": 5084,
+      "sha256": "ee00ad86b23e9f70e0969ab2d4ab65ce567ac8ef261c4e842966d7e4681ff163"
+    },
+    {
+      "original": "parts/rear_white.step",
+      "destination": "src/v2/parts/rear_white.step",
+      "bytes": 927075,
+      "sha256": "ec08522f383cd912a200843550779388d06ad82ef88521ba75b9ef99bf75f56b"
+    },
+    {
+      "original": "parts/rear_white.stl",
+      "destination": "src/v2/parts/rear_white.stl",
+      "bytes": 646284,
+      "sha256": "170edaf222cd466290ca9d0f38845f85a878367eaf9a2aecfce878ca557dd521"
+    },
+    {
+      "original": "parts/side_button_black.step",
+      "destination": "src/v2/parts/side_button_black.step",
+      "bytes": 98627,
+      "sha256": "fbe26c8c10e8a25ad157900b135ee3bc677ba85728e8fb9e7f53795803f9466a"
+    },
+    {
+      "original": "parts/side_button_black.stl",
+      "destination": "src/v2/parts/side_button_black.stl",
+      "bytes": 79084,
+      "sha256": "ea713618355ba5b61cb58cccc61c69953b1a8758155ee630e3bdbaf00fdb0258"
+    },
+    {
+      "original": "source/build_fit_tests.py",
+      "destination": "src/v2/source/build_fit_tests.py",
+      "bytes": 1391,
+      "sha256": "6a46a4e03b7f844116a48335a17b4bbdc63ccb2f9686bfc52c8df56b1b24b891"
+    },
+    {
+      "original": "source/build_replica.py",
+      "destination": "src/v2/source/build_replica.py",
+      "bytes": 17169,
+      "sha256": "a78797feab9506bf82b5c18f231ab26f7123c9fd0222477414b81ed9112b77e7"
+    },
+    {
+      "original": "source/check_axial_location.py",
+      "destination": "src/v2/source/check_axial_location.py",
+      "bytes": 735,
+      "sha256": "07b5f4aa9cecaa49bf84d39ba4c2b5bc8d6a8990360905f0382bedbe755a24ad"
+    },
+    {
+      "original": "source/package_fit_tests.py",
+      "destination": "src/v2/source/package_fit_tests.py",
+      "bytes": 479,
+      "sha256": "6e663b0b7d9e1c307c8060ded4365696e4e5257d697da6a5b4827523a6011322"
+    },
+    {
+      "original": "source/package_prints.py",
+      "destination": "src/v2/source/package_prints.py",
+      "bytes": 5570,
+      "sha256": "fefa5244f2644615a24128c13c4aff4a4bee76ebfb6ead9684ff84e3e9410b53"
+    },
+    {
+      "original": "source/presets/black.json",
+      "destination": "src/v2/source/presets/black.json",
+      "bytes": 7418,
+      "sha256": "b1c24fbadea89590a7af6566ccbb6b42d50ba5b0e7d27506c5ff09fb5e50ef96"
+    },
+    {
+      "original": "source/presets/machine.json",
+      "destination": "src/v2/source/presets/machine.json",
+      "bytes": 20568,
+      "sha256": "89a5a0aaaaf7a3c311ffa905e402ff2046488b3acfe835df526650b8101eddf1"
+    },
+    {
+      "original": "source/presets/process.json",
+      "destination": "src/v2/source/presets/process.json",
+      "bytes": 7028,
+      "sha256": "1f2f135a40b40d82e0ba9af7b80b8de6cfeae0f76abbac7a9b2d0243c1325d21"
+    },
+    {
+      "original": "source/presets/white.json",
+      "destination": "src/v2/source/presets/white.json",
+      "bytes": 7418,
+      "sha256": "6bb9e9e8defcf4b42d4c0e8a5b5817b65de902c97b251296ac5e3a736e4c2697"
+    },
+    {
+      "original": "source/render_blender.py",
+      "destination": "src/v2/source/render_blender.py",
+      "bytes": 10776,
+      "sha256": "e54b0fa1f41c916b72048f94b06a9318218ffe15cb9c02d5d668c30dc4c5c40f"
+    },
+    {
+      "original": "source/slice_fit_tests.py",
+      "destination": "src/v2/source/slice_fit_tests.py",
+      "bytes": 460,
+      "sha256": "0084eef34f07aeaf5d2594156205cbe9167df4e643aec608c2402968f6b0236b"
+    },
+    {
+      "original": "source/slice_plates.py",
+      "destination": "src/v2/source/slice_plates.py",
+      "bytes": 1148,
+      "sha256": "f01292e93422b0c3b5a1f1c1ce8eab66c6d636f39f51270db13ca6b957bb6325"
+    },
+    {
+      "original": "fit_tests/checks.json",
+      "destination": "src/v2/fit_tests/checks.json",
+      "bytes": 263,
+      "sha256": "39087abc3d94bf67ce5facd86d7964065501a6452dad29eaec1be0871dcc47bc"
+    },
+    {
+      "original": "fit_tests/length_gauge_136.5mm.step",
+      "destination": "src/v2/fit_tests/length_gauge_136.5mm.step",
+      "bytes": 210220,
+      "sha256": "acba1990d6840b61ea0432fecd4cccf208cf4326fd69bf1f0716609fd388481b"
+    },
+    {
+      "original": "fit_tests/length_gauge_136.5mm.stl",
+      "destination": "src/v2/fit_tests/length_gauge_136.5mm.stl",
+      "bytes": 23484,
+      "sha256": "f258e750c7c03e218dc35c90f14b96020aba8bd8f68b68eaf22cb73ac394bc79"
+    },
+    {
+      "original": "fit_tests/length_gauge_136.5mm_bed.stl",
+      "destination": "src/v2/fit_tests/length_gauge_136.5mm_bed.stl",
+      "bytes": 23484,
+      "sha256": "b82faa2e3edf7ee3ebf44b5bcf0a2e427d69535299fe55cab31ce06251417436"
+    },
+    {
+      "original": "fit_tests/panel_pin_coupon.step",
+      "destination": "src/v2/fit_tests/panel_pin_coupon.step",
+      "bytes": 76128,
+      "sha256": "46de4f377ab9d56fbb4f92f7de681c365e76b7ecd21a11d8fde91d4eb3c63dde"
+    },
+    {
+      "original": "fit_tests/panel_pin_coupon.stl",
+      "destination": "src/v2/fit_tests/panel_pin_coupon.stl",
+      "bytes": 41384,
+      "sha256": "0053d5f5efc5066481251005e040eba68aa3da089b7b2046e474c45f2ab651f1"
+    },
+    {
+      "original": "fit_tests/panel_pin_coupon_bed.stl",
+      "destination": "src/v2/fit_tests/panel_pin_coupon_bed.stl",
+      "bytes": 41384,
+      "sha256": "c66d0b10e94425615c111ed83a4c41b95c15a9b54568e8a49ca55e0627bc3fc9"
+    },
+    {
+      "original": "fit_tests/panel_socket_coupon.step",
+      "destination": "src/v2/fit_tests/panel_socket_coupon.step",
+      "bytes": 53107,
+      "sha256": "c1691b53760377d46344fc334024a32d9b9e346708e0799f175037ca7bc770c1"
+    },
+    {
+      "original": "fit_tests/panel_socket_coupon.stl",
+      "destination": "src/v2/fit_tests/panel_socket_coupon.stl",
+      "bytes": 30584,
+      "sha256": "fac9d1658ebbb3e7ef4bf395a31463788c335ddc926523475e2b67a2d704af89"
+    },
+    {
+      "original": "fit_tests/panel_socket_coupon_bed.stl",
+      "destination": "src/v2/fit_tests/panel_socket_coupon_bed.stl",
+      "bytes": 30584,
+      "sha256": "d8c4d42dd952725fa0b5e16b4d9c664ce3978ef23a16c3b21330f867b36e369b"
+    },
+    {
+      "original": "fit_tests/plate_fit_tests.3mf",
+      "destination": "src/v2/fit_tests/plate_fit_tests.3mf",
+      "bytes": 22525,
+      "sha256": "12f1bd7ea73742005a3f99cfd7ee8c40dd77daa826ef3fb798c572cf6a91dc13"
+    },
+    {
+      "original": "parts/antenna_black_bed.stl",
+      "destination": "exports/v2/antenna_black_bed.stl",
+      "bytes": 228184,
+      "sha256": "acb43794617aaa75fe3c3ce6a4c22b8800b236d57e8a0eb1137613f60694a584"
+    },
+    {
+      "original": "parts/front_black_bed.stl",
+      "destination": "exports/v2/front_black_bed.stl",
+      "bytes": 887084,
+      "sha256": "e8ce14c02ca02cb6adec008f370da2be9118bc6035d6e82206b31b5df10801d0"
+    },
+    {
+      "original": "parts/front_white_bed.stl",
+      "destination": "exports/v2/front_white_bed.stl",
+      "bytes": 2128384,
+      "sha256": "1c5b3eb4e6b6374068754a01a867fcdfdc3f34562626d37e50b5a24dcdd8c777"
+    },
+    {
+      "original": "parts/rear_white_bed.stl",
+      "destination": "exports/v2/rear_white_bed.stl",
+      "bytes": 646284,
+      "sha256": "b6cb323b8f7cd5d0f583cc5367acc6684b6d0d8bd2b238debe59dff8d877934a"
+    },
+    {
+      "original": "parts/side_button_black_bed.stl",
+      "destination": "exports/v2/side_button_black_bed.stl",
+      "bytes": 79084,
+      "sha256": "ab3fd153334f54e2e7e88df13e84755dd697bf07d9434c21a01480562fa4b426"
+    },
+    {
+      "original": "plate_white.3mf",
+      "destination": "exports/v2/plate_white.3mf",
+      "bytes": 622596,
+      "sha256": "5558916bfc9313358d88709f5238573981d27004bba3e07a906d858c51beb879"
+    },
+    {
+      "original": "plate_black.3mf",
+      "destination": "exports/v2/plate_black.3mf",
+      "bytes": 241458,
+      "sha256": "c8f00bd00b17d098c688babe51561219244782772db79dd860c74abb53a03082"
+    },
+    {
+      "original": "fit_tests/length_gauge_136.5mm_bed.stl",
+      "destination": "exports/v2/fit-tests/length_gauge_136.5mm_bed.stl",
+      "bytes": 23484,
+      "sha256": "b82faa2e3edf7ee3ebf44b5bcf0a2e427d69535299fe55cab31ce06251417436"
+    },
+    {
+      "original": "fit_tests/panel_pin_coupon_bed.stl",
+      "destination": "exports/v2/fit-tests/panel_pin_coupon_bed.stl",
+      "bytes": 41384,
+      "sha256": "c66d0b10e94425615c111ed83a4c41b95c15a9b54568e8a49ca55e0627bc3fc9"
+    },
+    {
+      "original": "fit_tests/panel_socket_coupon_bed.stl",
+      "destination": "exports/v2/fit-tests/panel_socket_coupon_bed.stl",
+      "bytes": 30584,
+      "sha256": "d8c4d42dd952725fa0b5e16b4d9c664ce3978ef23a16c3b21330f867b36e369b"
+    },
+    {
+      "original": "fit_tests/plate_fit_tests.3mf",
+      "destination": "exports/v2/fit-tests/plate_fit_tests.3mf",
+      "bytes": 22525,
+      "sha256": "12f1bd7ea73742005a3f99cfd7ee8c40dd77daa826ef3fb798c572cf6a91dc13"
+    },
+    {
+      "original": "previews/04_front_perspective.png",
+      "destination": "images/04_front_perspective.png",
+      "bytes": 1715172,
+      "sha256": "2eb4e82f86e88e3049ca4b2938dfb596790f2038d0fff3a84c71d3b2a4ed63ca"
+    },
+    {
+      "original": "previews/09_v2_separate_parts.png",
+      "destination": "images/09_v2_separate_parts.png",
+      "bytes": 1861284,
+      "sha256": "cb40476b76dbaebd0d5cddc5e93f7ff62cbf2d7acdf59edc65a32d4c39b6bca1"
+    },
+    {
+      "original": "geometry_checks.json",
+      "destination": "validation/legacy-v2/geometry_checks.json",
+      "bytes": 4427,
+      "sha256": "2fadc3d114796e7243836e7584ee14a99d5d851c9cd00cd672e061389a6843ed"
+    },
+    {
+      "original": "mesh_checks.json",
+      "destination": "validation/legacy-v2/mesh_checks.json",
+      "bytes": 2064,
+      "sha256": "fd3ec0057dd313b643fd6a713a1f6fae86ea78aa8ee525c53689f498cb243ae3"
+    },
+    {
+      "original": "axial_location_checks.json",
+      "destination": "validation/legacy-v2/axial_location_checks.json",
+      "bytes": 885,
+      "sha256": "e09e0e67d7bf4d0d61a08fe5fdd4b9d74a8781493ed8c84bb2b3dabc05d24893"
+    },
+    {
+      "original": "panel_insertion_checks.json",
+      "destination": "validation/legacy-v2/panel_insertion_checks.json",
+      "bytes": 560,
+      "sha256": "2d5d2822fb4a2fb4174025c5cad60e4d25a7796e7aff36882c9e9d5853e65038"
+    },
+    {
+      "original": "orientation_comparison.json",
+      "destination": "validation/legacy-v2/orientation_comparison.json",
+      "bytes": 5737,
+      "sha256": "9103fa08c4c031c49618960ec7b89b2097d31bae1c8a74c609e1222c7079084c"
+    },
+    {
+      "original": "slicing_summary.json",
+      "destination": "validation/legacy-v2/slicing_summary.json",
+      "bytes": 418,
+      "sha256": "6a5a66d57122c9f89cdbcbca4283d83c246ebf787976705bfe0ca5254984c02e"
+    },
+    {
+      "original": "使用说明.md",
+      "destination": "docs/original-v2-notes.md",
+      "bytes": 6826,
+      "sha256": "04c79bacef1bbe51db05b7ebcba27f47d692679b3b98f3ccbe447843884406bf"
+    },
+    {
+      "version": "v1",
+      "original": "retro_remote_replica.blend",
+      "destination": "src/v1/retro_remote_replica.blend",
+      "bytes": 1702355,
+      "sha256": "597edb651521cebadc3502cbe1cb970d3e2f735f839834d905d5c65d012982ea"
+    },
+    {
+      "version": "v1",
+      "original": "retro_remote_assembly.step",
+      "destination": "src/v1/retro_remote_assembly.step",
+      "bytes": 3317849,
+      "sha256": "6277ffc957301945b7a93f073f10096f2a28db987129cc220cf9559deac18a57"
+    },
+    {
+      "version": "v1",
+      "original": "parameters.json",
+      "destination": "src/v1/parameters.json",
+      "bytes": 609,
+      "sha256": "5b921fe2437b23b822a3ac9ff371a8feca5eb51b6b7326985fce9eeebcd3efb2"
+    },
+    {
+      "version": "v1",
+      "original": "assembly_multicolor.3mf",
+      "destination": "src/v1/assembly_multicolor.3mf",
+      "bytes": 806140,
+      "sha256": "13c8dd81770bdcbe2366618ccd31bf11bc6d58b4747e46d8c7a3cc70ab68240c"
+    },
+    {
+      "version": "v1",
+      "original": "parts/REFERENCE_remote_DO_NOT_PRINT.stl",
+      "destination": "src/v1/parts/REFERENCE_remote_DO_NOT_PRINT.stl",
+      "bytes": 22284,
+      "sha256": "6ceadc7e376c5d7557c6e54bcd9397bfe16b0d49771e027849fe8ae4f5cdd5b2"
+    },
+    {
+      "version": "v1",
+      "original": "parts/antenna_black.step",
+      "destination": "src/v1/parts/antenna_black.step",
+      "bytes": 25700,
+      "sha256": "192d315eccbec97e41db9d49a4f146188438062c1bff0c2fe88f6533fcd8a133"
+    },
+    {
+      "version": "v1",
+      "original": "parts/antenna_black.stl",
+      "destination": "src/v1/parts/antenna_black.stl",
+      "bytes": 228184,
+      "sha256": "63f81de7e7bedfb5f0e67e5e4c3ff22dc5e0f6c50145aa672dc0d495b81846e3"
+    },
+    {
+      "version": "v1",
+      "original": "parts/front_black.step",
+      "destination": "src/v1/parts/front_black.step",
+      "bytes": 765467,
+      "sha256": "16534fe6509eb2017b76837c94f57413b6dbba4167e5c7f302be9554bb05738e"
+    },
+    {
+      "version": "v1",
+      "original": "parts/front_black.stl",
+      "destination": "src/v1/parts/front_black.stl",
+      "bytes": 843384,
+      "sha256": "31d899b73fe3c81fed7547c3f971ef5f82c30e89255aa85b8c2ad37460dd3e33"
+    },
+    {
+      "version": "v1",
+      "original": "parts/front_white.step",
+      "destination": "src/v1/parts/front_white.step",
+      "bytes": 1469280,
+      "sha256": "630c7d0ff1d82f5d734a70f77cc2767112a2a3be624898b05f3974d2b5aec12d"
+    },
+    {
+      "version": "v1",
+      "original": "parts/front_white.stl",
+      "destination": "src/v1/parts/front_white.stl",
+      "bytes": 1980284,
+      "sha256": "b112320e29a1e263f1e90fffe88d0fcfadc5427c69188676e15a4ee3bc37e01f"
+    },
+    {
+      "version": "v1",
+      "original": "parts/magnet_coupon_4.1_4.2_4.3mm.stl",
+      "destination": "exports/v1/fit-tests/magnet_coupon_4.1_4.2_4.3mm.stl",
+      "bytes": 101884,
+      "sha256": "749c5bd1a197619d504e23f381d2a6bf88883741cb3f114c81d4125bf3541d50"
+    },
+    {
+      "version": "v1",
+      "original": "parts/rail_coupon_front.stl",
+      "destination": "src/v1/parts/rail_coupon_front.stl",
+      "bytes": 6284,
+      "sha256": "4f01a99f23b1990f6cd9bcab4909c0602e10d56b543ccb50f9954ceefbd8f32b"
+    },
+    {
+      "version": "v1",
+      "original": "parts/rail_coupon_rear.stl",
+      "destination": "src/v1/parts/rail_coupon_rear.stl",
+      "bytes": 5084,
+      "sha256": "ee00ad86b23e9f70e0969ab2d4ab65ce567ac8ef261c4e842966d7e4681ff163"
+    },
+    {
+      "version": "v1",
+      "original": "parts/rear_white.step",
+      "destination": "src/v1/parts/rear_white.step",
+      "bytes": 896526,
+      "sha256": "f4b05ad6a7118b12b03980b995ca9016e3033e46ff47889c3d1bf0671ef15d4f"
+    },
+    {
+      "version": "v1",
+      "original": "parts/rear_white.stl",
+      "destination": "src/v1/parts/rear_white.stl",
+      "bytes": 644684,
+      "sha256": "8b924b58c0705f786ca324d78fe8f9c19d6293434a6b3caabff96ec8a18cce46"
+    },
+    {
+      "version": "v1",
+      "original": "parts/side_button_black.step",
+      "destination": "src/v1/parts/side_button_black.step",
+      "bytes": 98627,
+      "sha256": "328dd526c5916630b8c0bb3868d2d9ffa12ea83092483ac92b5ccdc1f05f892f"
+    },
+    {
+      "version": "v1",
+      "original": "parts/side_button_black.stl",
+      "destination": "src/v1/parts/side_button_black.stl",
+      "bytes": 79084,
+      "sha256": "ea713618355ba5b61cb58cccc61c69953b1a8758155ee630e3bdbaf00fdb0258"
+    },
+    {
+      "version": "v1",
+      "original": "source/build_replica.py",
+      "destination": "src/v1/source/build_replica.py",
+      "bytes": 14840,
+      "sha256": "0d3fa0d07ba79d0558f14d1a4625f169d90264e41a17e6ee225945077bc2ed91"
+    },
+    {
+      "version": "v1",
+      "original": "source/package_prints.py",
+      "destination": "src/v1/source/package_prints.py",
+      "bytes": 6359,
+      "sha256": "64d48282cea345716bbaf920fd941975641e2b293612fd6f3b1d8d3784edf19d"
+    },
+    {
+      "version": "v1",
+      "original": "source/render_blender.py",
+      "destination": "src/v1/source/render_blender.py",
+      "bytes": 10439,
+      "sha256": "6ca20acc2e712d79182767eac1bc3988089966569e1c6f515925c14433e8f8c3"
+    },
+    {
+      "version": "v1",
+      "original": "source/build_bambu_project.py",
+      "destination": "src/v1/source/build_bambu_project.py",
+      "bytes": 5814,
+      "sha256": "b86964d4398597393c653048f32cd6382d8109da50586c05cb4ead5c3e4059b2"
+    },
+    {
+      "version": "v1",
+      "original": "source/build_magnet_coupon.py",
+      "destination": "src/v1/source/build_magnet_coupon.py",
+      "bytes": 549,
+      "sha256": "1df0c5e210b3282b5ddf98a80a6d2a83cd34dd71f68a30b12339594871280f8b"
+    },
+    {
+      "version": "v1",
+      "original": "front_multicolor.3mf",
+      "destination": "exports/v1/front_multicolor.3mf",
+      "bytes": 616120,
+      "sha256": "9f618c5e2ba512765e337d2a17b7de8242df73af03e1da02634a2654034a18da"
+    },
+    {
+      "version": "v1",
+      "original": "print_layout_multicolor.3mf",
+      "destination": "exports/v1/print_layout_multicolor.3mf",
+      "bytes": 820078,
+      "sha256": "13643803a0bdc949effe0467d902df52e2df8173f89db56cf83a1bf1d6a3a832"
+    },
+    {
+      "version": "v1",
+      "original": "parts/rail_coupon_front_bed.stl",
+      "destination": "exports/v1/fit-tests/rail_coupon_front_bed.stl",
+      "bytes": 6284,
+      "sha256": "72fe339253aebdab2e6440c66ab3edb84f496c9e6603f17e7fd38ffac9fbfc5b"
+    },
+    {
+      "version": "v1",
+      "original": "parts/rail_coupon_rear_bed.stl",
+      "destination": "exports/v1/fit-tests/rail_coupon_rear_bed.stl",
+      "bytes": 5084,
+      "sha256": "f5ae528e4bed2f072e3054659fdc6f52b0449ede79efd63f438f7687251a3a0c"
+    },
+    {
+      "version": "v1",
+      "original": "geometry_checks.json",
+      "destination": "validation/legacy-v1/geometry_checks.json",
+      "bytes": 4427,
+      "sha256": "2fadc3d114796e7243836e7584ee14a99d5d851c9cd00cd672e061389a6843ed"
+    },
+    {
+      "version": "v1",
+      "original": "mesh_checks.json",
+      "destination": "validation/legacy-v1/mesh_checks.json",
+      "bytes": 2061,
+      "sha256": "2a1622d9aec3ba97f894d2a160f70a7c94a051fcdaf0d3c2590ad29dadc79934"
+    },
+    {
+      "version": "v1",
+      "original": "slicing_validation.json",
+      "destination": "validation/legacy-v1/slicing_validation.json",
+      "bytes": 1205,
+      "sha256": "8b27a5c7f4e7cbfb80d6f2277ae97e49f2658669db641ce9d4eed4bad593a918"
+    },
+    {
+      "version": "v1",
+      "original": "reference_comparison.json",
+      "destination": "validation/legacy-v1/reference_comparison.json",
+      "bytes": 1010,
+      "sha256": "c85b2b018d836f7d21b848741a0e0930fb85af5920f037497f1dd7082cb8b17c"
+    },
+    {
+      "version": "v1",
+      "original": "bambu_project_checks.json",
+      "destination": "validation/legacy-v1/bambu_project_checks.json",
+      "bytes": 762,
+      "sha256": "97e75a61a73ff94f56261cd256a69cd36fa390fc5cf840627a386b54f2db9fb7"
+    },
+    {
+      "version": "v1",
+      "original": "使用说明.md",
+      "destination": "docs/original-v1-notes.md",
+      "bytes": 8262,
+      "sha256": "6701e8ee77a32cfe1b051a4c550e1aabfa7d8db68de7181c09ac12faa2353f7c"
+    },
+    {
+      "version": "v1",
+      "original": "print_execution.json",
+      "destination": "print/historical-v1-feedback.json",
+      "bytes": 1188,
+      "sha256": "9ceb9adaac7dcc271072a4b21d65bf1cf1fd1da17ecf1637ba7aab754f184345"
+    },
+    {
+      "version": "v1",
+      "original": "previews/08_exploded.png",
+      "destination": "images/v1/08_exploded.png",
+      "bytes": 1807276,
+      "sha256": "2b912d4c98d5891227054906cc74d0adae1776cb746be4c00df591701a93360f"
+    }
+  ],
+  "source_versions": {
+    "v1": "apple-tv-retro-replica / 2026-09-05",
+    "v2": "apple-tv-retro-replica-v2 / 2026-09-05"
+  }
+}
