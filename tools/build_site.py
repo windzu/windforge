@@ -37,6 +37,9 @@ rows = []
 for model in MODELS:
     slug = model['slug']
     release = model['release']
+    if release['published']:
+        assert release['makerworld_url'] and release['version'] and release['license'] and release['publication_authorized'], 'Published models require actual URL, version, chosen license and authorization'
+    status_text = ('已发布' if release['version'] == model['version'] else f"{release['version']} 已发布 · {model['version']} {model['status']}") if release['published'] else model['status']
     assert slug == Path(slug).name and '..' not in slug
     source = ROOT / 'models' / slug
     target = OUT / 'assets/models' / slug
@@ -51,9 +54,9 @@ for model in MODELS:
 <a class="project-image" href="models/{slug}/" aria-label="查看 {E(model['title'])}"><img src="{hero}" alt="{E(model['title'])}的实际模型渲染" width="1200" height="1400" loading="lazy"></a>
 <div class="project-copy"><span class="eyebrow">OBJECT {E(model['number'])} / {E(model['category'])}</span><h3>{E(model['title'])}</h3><p>{E(model['summary'])}</p>
 <div class="project-meta"><span>{E(model['version'])}</span><span>{E(model['part_count'])} 个零件</span><span>{E(model['dimensions'])}</span></div>
-<span class="pill">{E('已发布' if release['published'] else model['status'])}</span><a class="text-link" style="margin-top:24px" href="models/{slug}/">走近这个作品 <span aria-hidden="true">↗</span></a></div></article>''')
+<span class="pill">{E(status_text)}</span><a class="text-link" style="margin-top:24px" href="models/{slug}/">走近这个作品 <span aria-hidden="true">↗</span></a></div></article>''')
     prefix = '../../'
-    specifications = [('适配', model['compatibility']), ('主体尺寸', model['body_dimensions']), ('含天线高度', '233 mm'), ('制造零件', f"{model['part_count']} 件"), ('材料', model['material']), ('额外物料', model['hardware'])]
+    specifications = [('适配', model['compatibility']), ('主体尺寸', model['body_dimensions']), ('整体尺寸', model['dimensions']), ('制造零件', f"{model['part_count']} 件"), ('材料', model['material']), ('额外物料', model['hardware'])]
     spec = ''.join(f'<div><dt>{E(key)}</dt><dd>{E(value)}</dd></div>' for key,value in specifications)
     features = ''.join(f'<article><span class="eyebrow">0{index}</span><h3>{E(feature["title"])}</h3><p>{E(feature["text"])}</p></article>' for index,feature in enumerate(model['features'],1))
     steps = ''.join(f'<li>{E(step)}</li>' for step in model['assembly_steps'])
@@ -61,9 +64,7 @@ for model in MODELS:
     print_spec = ''.join(f'<div><dt>{E(key)}</dt><dd>{E(value)}</dd></div>' for key,value in [('打印机 / 喷嘴', f"{p['printer']} / {p['nozzle']}"), ('层高',p['layer_height']), ('墙层', f"{p['walls']} 道"), ('填充',p['infill']), ('预计时间',p['estimated_time']), ('预计耗材',p['estimated_filament'])])
     validation_titles = {'geometry':'几何完整性','fit_tests':'配合试件','white_plate':'白色盘打印','black_plate':'黑色盘打印','assembly':'完整装配'}
     validations = ''.join(f'<li><span class="indicator {"pending" if "待" in text else ""}" aria-hidden="true"></span><span>{E(validation_titles[key])}<small>{E(text)}</small></span></li>' for key,text in model['validation'].items())
-    if release['published']:
-        assert release['makerworld_url'] and release['license'] and release['publication_authorized'], 'Published models require actual URL, chosen license and publication authorization'
-    makerworld = f'<a class="action" href="{E(release["makerworld_url"])}" target="_blank" rel="noopener noreferrer">在 MakerWorld 查看 <span aria-hidden="true">↗</span></a>' if release['makerworld_url'] else '<p class="release-pending">MakerWorld · 发布准备中</p>'
+    makerworld = f'<a class="action" href="{E(release["makerworld_url"])}" target="_blank" rel="noopener noreferrer">在 MakerWorld 查看 {E(release["version"] or "")} <span aria-hidden="true">↗</span></a>' if release['makerworld_url'] else '<p class="release-pending">MakerWorld · 发布准备中</p>'
     files = ''
     download_dir = target / 'downloads'
     if release['license'] and release['publication_authorized']:
@@ -86,7 +87,7 @@ for model in MODELS:
     lessons = ''.join(f'<article><h3>{E(lesson["title"])}</h3><p>{E(lesson["text"])}</p></article>' for lesson in model.get('lessons', []))
     body = f'''
 <a class="back" href="{prefix}index.html#collection">← 返回作品集</a>
-<div class="product-heading"><div><span class="eyebrow">OBJECT {E(model['number'])} / {E(model['english_title'])}</span><h1>{E(model['title'])}</h1><p>{E(model['subtitle'])}</p></div><span class="pill">{E('已发布' if release['published'] else model['status'])}</span></div>
+<div class="product-heading"><div><span class="eyebrow">OBJECT {E(model['number'])} / {E(model['english_title'])}</span><h1>{E(model['title'])}</h1><p>{E(model['subtitle'])}</p></div><span class="pill">{E(status_text)}</span></div>
 <section class="product-stage" aria-label="模型展示与规格"><div class="stage-art"><div class="stage-bar"><div class="view-tabs" aria-label="模型视图"><button data-view="assembly" aria-pressed="true">装配视图</button><button data-view="parts" aria-pressed="false">拆件图</button></div><span class="mono">{E(model['version'].upper())} · 3D PREVIEW</span></div>
 <model-viewer src="{prefix}assets/models/{slug}/display.glb" alt="{E(model['title'])}的可旋转 3D 模型，遥控器仅为适配展示" camera-controls touch-action="pan-y" camera-orbit="-150deg 72deg auto" shadow-intensity="0.8" exposure="1" interaction-prompt="none" poster="{prefix}{hero}"><img class="model-poster" slot="poster" src="{prefix}{hero}" alt="模型渲染预览"></model-viewer>
 <img class="fallback-art" data-fallback-art src="{prefix}{hero}" alt="模型渲染预览" hidden><img class="parts-art" data-parts-art src="{prefix}{parts}" alt="后壳、前框、独立面板的拆件渲染图" hidden><p class="stage-hint" data-stage-hint>拖动旋转 · 双指或滚轮缩放</p></div>
@@ -107,7 +108,7 @@ featured = MODELS[0]
 home_hero = f"assets/models/{featured['slug']}/{Path(featured['images']['hero']).name}"
 home = f'''
 <section class="hero"><div class="hero-copy"><span class="eyebrow">A PERSONAL OBJECT WORKSHOP / EST. 2026</span><h1>把想法，<br>拿在手里。</h1><p>这里是 Wind 的造物工坊。<br>从日常灵感出发，和 AI 一起把想法做成模型，<br>再通过打印、使用与改进，让它成为实物。</p><a class="action" href="#collection">探索作品 <span aria-hidden="true">↓</span></a></div>
-<figure class="hero-art" style="margin:0"><a href="models/{featured['slug']}/" aria-label="查看大哥大遥控器外壳"><img src="{home_hero}" alt="大哥大遥控器外壳模型渲染，黑白壳体与顶部天线" width="1200" height="1400" fetchpriority="high"></a><figcaption class="image-caption"><span>001 / 大哥大遥控器外壳</span><span>模型渲染 · v2</span></figcaption></figure></section>
+<figure class="hero-art" style="margin:0"><a href="models/{featured['slug']}/" aria-label="查看{E(featured['title'])}"><img src="{home_hero}" alt="{E(featured['title'])} · {E(featured['images']['type'])}" width="1200" height="1400" fetchpriority="high"></a><figcaption class="image-caption"><span>{E(featured['number'])} / {E(featured['title'])}</span><span>{E(featured['images']['type'])} · {E(featured['version'])}</span></figcaption></figure></section>
 <section id="collection" aria-labelledby="collection-title"><div class="section-head"><div><span class="eyebrow">THE COLLECTION</span><h2 id="collection-title">工坊里的作品 <span class="mono" style="font-size:13px;color:#7c866e;vertical-align:super;margin-left:8px">{len(MODELS):02d}</span></h2></div><div class="filters" aria-label="作品状态筛选"><button data-filter="all" aria-pressed="true">全部作品</button><button data-filter="published" aria-pressed="false">已发布</button></div></div>{''.join(rows)}<p class="empty" data-empty hidden>目前还没有已发布的作品。完成发布后，会在这里展示。</p></section>
 <section class="about" id="about"><div><span class="eyebrow" style="display:block;margin-bottom:18px">ABOUT THE WORKSHOP</span><h2>Wind 的造物工坊。</h2></div><div><p>一个个人 3D 模型设计与打印项目。作品从具体需求和生活中的兴趣出发，留下可编辑的模型、设计取舍和实物反馈。</p><p>这个网站展示作品和制作记录；MakerWorld 承接模型发布与打印分享。每件作品都标明自己的版本与验证范围。</p></div></section>'''
 (OUT / 'index.html').write_text(page('WindForge · Wind 的造物工坊','把想法设计成模型，再把模型打印成实物。探索 Wind 的 3D 作品、制作记录与 MakerWorld 发布。','',home))
