@@ -2,7 +2,7 @@
   "updated_date": "2026-10-06",
   "platform": "MakerWorld Global",
   "account": "windzu",
-  "status": "under-review",
+  "status": "appeal-pending",
   "draft_url": "https://makerworld.com/en/my/models/drafts/9909258/edit",
   "version": "v2",
   "raw_files": 12,
@@ -43,8 +43,8 @@
   "real_photos_required": "至少 3 张打印实拍，覆盖 3 个视角",
   "china_sync": "Do not sync any models",
   "pending": [
-    "等待平台审核",
-    "审核通过后核实公开页面，回填模型链接与 v2 发布状态"
+    "等待实拍人工复核；平台回执表示 7 天内通知结果",
+    "通过后核实公开页面，回填模型链接与 v2 发布状态"
   ],
   "covers_uploaded": [
     "4:3",
@@ -56,13 +56,44 @@
     "侧键安装时不易按，容易掉落"
   ],
   "submission_attempt_date": "2026-10-06",
-  "submission_result": "成功提交；账号显示 Verifying (1)、Draft (0)、Published Models (0)",
+  "submission_result": "提交成功后转入 Failed (1)，原因是自动实拍识别；人工复核申请已取得 Submission Successful 回执",
   "submitted_date": "2026-10-06",
-  "status_url": "https://makerworld.com/en/@windzu/verifying",
+  "status_url": "https://makerworld.com/en/@windzu/verify-failed",
   "submission_route": "https://makerworld.com/en/my/models/drafts/9909258/publish",
   "platform_counts": {
     "published": 0,
-    "verifying": 1,
+    "failed": 1,
+    "verifying": 0,
     "draft": 0
-  }
+  },
+  "review_failure": "System detected no real life photo.",
+  "appeal": {
+    "submitted_date": "2026-10-06",
+    "status": "submitted-awaiting-human-review",
+    "reason": "These are my own photos of the printed V2 case, not renders or AI images. Front/rear screen backgrounds were removed for privacy. The disassembly photo is unretouched and shows the printed parts beside the Siri Remote. Attached evidence retains print texture and the desk. Please review.",
+    "proof_images": [
+      "images/photos/2026-10-06-disassembled.jpg",
+      "images/photos/makerworld-proof-front-context.jpg",
+      "images/photos/makerworld-proof-rear-context.jpg"
+    ],
+    "receipt": "Submission Successful; operations team received the appeal; results within 7 days.",
+    "response_days": 7
+  },
+  "events": [
+    {
+      "date": "2026-10-06",
+      "status": "under-review",
+      "evidence": "Verifying (1), Draft (0), Published Models (0)"
+    },
+    {
+      "date": "2026-10-06",
+      "status": "review-failed",
+      "evidence": "System detected no real life photo."
+    },
+    {
+      "date": "2026-10-06",
+      "status": "appeal-pending",
+      "evidence": "Submission Successful; results within 7 days."
+    }
+  ]
 }

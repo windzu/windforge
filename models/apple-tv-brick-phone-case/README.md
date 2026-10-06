@@ -8,7 +8,7 @@
 | --- | --- |
 | 模型版本 | v2，原设计日期 2026-09-05 |
 | 入库日期 | 2026-10-06 |
-| 状态 | 实物与功能已验证；有装配瑕疵，MakerWorld 审核中 |
+| 状态 | 实物与功能已验证；有装配瑕疵，MakerWorld 等待人工复核 |
 | 来源 | 本机既有 `apple-tv-retro-replica-v2` 工程 |
 | 设计工具 | CadQuery 2.8；Blender 场景与渲染 |
 | 单位 | mm；Blender 场景以 m 存储、以 mm 显示 |
@@ -69,7 +69,7 @@ Wind 于 2026-10-06 授权该模型发布，确定禁止商用许可，并选择
 
 ![v2 拆解实拍](images/photos/2026-10-06-disassembled-web.jpg)
 
-2026-10-06 已通过草稿卡片的正式发布流程提交，平台显示「Verifying (1)」「Draft (0)」。当前审核中，公开模型链接尚未产生。
+2026-10-06 已完成全球站提交。随后平台自动识别提示「System detected no real life photo」，转入 Failed 列表；三张上传照片实际均来自 Wind 的打印实拍。已提交三张证据与人工复核说明，取得「Submission Successful」回执，平台表示 7 天内通知结果。当前等待人工复核，公开模型链接尚未产生。记录见 [发布过程](publish/publishing-notes-2026-10-06.md)。
 
 账号中国站同步设置当前为「Do not sync any models」。本次只核对设置，未改变账号同步范围。原始商品照片不用于封面。正式发布并核实公开页面后，再回填模型 URL。
 

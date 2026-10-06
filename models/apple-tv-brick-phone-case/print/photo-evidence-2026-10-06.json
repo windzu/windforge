@@ -57,6 +57,22 @@
       "width": 900,
       "height": 1200,
       "processing": "拆解图仅缩放；正背面及封面：方向校正、sRGB 转换、前景分离与背景遮挡、构图和曝光 1.10、压缩。保留原照片中的实物结构与纹理；无生成式修改；不含 EXIF/IPTC/XMP。"
+    },
+    {
+      "path": "images/photos/makerworld-proof-front-context.jpg",
+      "source": "IMG_6637.HEIC",
+      "sha256": "74921cc099a8d5239d298ebbd93fd537b6a2cb84879ae810664f37530fa13ee1",
+      "width": 1118,
+      "height": 2000,
+      "processing": "申诉证据：方向校正与 sRGB 转换、缩放裁剪，仅屏幕背景遮挡；保留键盘、桌面、实物、打印纹理与装配瑕疵；无曝光调整或生成式修改；不含 EXIF/IPTC/XMP。"
+    },
+    {
+      "path": "images/photos/makerworld-proof-rear-context.jpg",
+      "source": "IMG_6638.HEIC",
+      "sha256": "77fff9457ebb9b70c02af26fbd221c4c7bc4329b1cf2522c03d5b85b9de7f502",
+      "width": 987,
+      "height": 2171,
+      "processing": "申诉证据：方向校正与 sRGB 转换、缩放裁剪，仅屏幕背景遮挡；保留键盘、桌面、实物、打印纹理与装配瑕疵；无曝光调整或生成式修改；不含 EXIF/IPTC/XMP。"
     }
   ],
   "sources": [

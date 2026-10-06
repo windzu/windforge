@@ -65,7 +65,7 @@ for model in MODELS:
     print_spec = ''.join(f'<div><dt>{E(key)}</dt><dd>{E(value)}</dd></div>' for key,value in [('打印机 / 喷嘴', f"{p['printer']} / {p['nozzle']}"), ('层高',p['layer_height']), ('墙层', f"{p['walls']} 道"), ('填充',p['infill']), ('预计时间',p['estimated_time']), ('预计耗材',p['estimated_filament'])])
     validation_titles = {'geometry':'几何完整性','fit_tests':'配合试件','white_plate':'白色盘打印','black_plate':'黑色盘打印','assembly':'整机装配','controls':'按键与操作','charging':'充电','magnetic_closure':'磁吸合壳','side_button':'侧键安装与保持'}
     validations = ''.join(f'<li><span class="indicator {"pending" if any(word in text for word in ("待", "瑕疵", "外露", "掉落")) else ""}" aria-hidden="true"></span><span>{E(validation_titles[key])}<small>{E(text)}</small></span></li>' for key,text in model['validation'].items())
-    release_caption = {'submission-unconfirmed':'提交结果待核实','under-review':'审核中'}.get(release.get('status'), '发布准备中')
+    release_caption = {'submission-unconfirmed':'提交结果待核实','under-review':'审核中','appeal-pending':'等待人工复核'}.get(release.get('status'), '发布准备中')
     makerworld = f'<a class="action" href="{E(release["makerworld_url"])}" target="_blank" rel="noopener noreferrer">在 MakerWorld 查看 {E(release["version"] or "")} <span aria-hidden="true">↗</span></a>' if release['makerworld_url'] else f'<p class="release-pending">MakerWorld · {E(release_caption)}</p>'
     files = ''
     download_dir = target / 'downloads'
