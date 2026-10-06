@@ -2,19 +2,59 @@
   "updated_date": "2026-10-06",
   "platform": "MakerWorld Global",
   "account": "windzu",
-  "status": "draft-saved",
+  "status": "submission-unconfirmed",
   "draft_url": "https://makerworld.com/en/my/models/drafts/9909258/edit",
   "version": "v2",
   "raw_files": 12,
   "license": "CC BY-NC 4.0",
   "category": "Household / Other House Models",
-  "description_languages": ["en", "zh"],
+  "description_languages": [
+    "en",
+    "zh"
+  ],
   "model_images": 2,
   "real_photos_received": 3,
-  "real_photos_uploaded": 1,
-  "real_photo_views_received": ["front", "rear", "disassembled"],
-  "real_photo_uploads": [{"source": "IMG_6639.HEIC", "view": "disassembled", "file": "images/photos/2026-10-06-disassembled.jpg", "status": "draft-saved-and-reloaded"}],
+  "real_photos_uploaded": 3,
+  "real_photo_views_received": [
+    "front",
+    "rear",
+    "disassembled"
+  ],
+  "real_photo_uploads": [
+    {
+      "source": "IMG_6639.HEIC",
+      "view": "disassembled",
+      "file": "images/photos/2026-10-06-disassembled.jpg",
+      "status": "draft-saved-and-reloaded"
+    },
+    {
+      "source": "IMG_6637.HEIC",
+      "view": "front",
+      "file": "images/photos/2026-10-06-front.jpg",
+      "status": "draft-saved-and-reloaded"
+    },
+    {
+      "source": "IMG_6638.HEIC",
+      "view": "rear",
+      "file": "images/photos/2026-10-06-rear.jpg",
+      "status": "draft-saved-and-reloaded"
+    }
+  ],
   "real_photos_required": "至少 3 张打印实拍，覆盖 3 个视角",
   "china_sync": "Do not sync any models",
-  "pending": ["确认实拍对应版本及功能验证范围", "确认并处理前两张实拍的屏幕背景", "上传剩余两张实拍和封面后提交发布"]
+  "pending": [
+    "用户完成 MakerWorld 平台安全验证",
+    "核对平台提交结果与公开页面；发布后回填链接"
+  ],
+  "covers_uploaded": [
+    "4:3",
+    "3:4"
+  ],
+  "feedback_date": "2026-10-06",
+  "known_issues": [
+    "磁铁孔深度未留够热熔胶空间，导致外露和合壳不贴合",
+    "侧键安装时不易按，容易掉落"
+  ],
+  "submission_attempt_date": "2026-10-06",
+  "submission_result": "发布按钮未给出明确反馈；创作者中心出现平台安全验证，尚未核实公开状态"
 }

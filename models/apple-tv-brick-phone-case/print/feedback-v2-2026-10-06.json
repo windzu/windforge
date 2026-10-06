@@ -1,0 +1,36 @@
+{
+  "feedback_date": "2026-10-06",
+  "version": "v2",
+  "actual_print_date": "未记录",
+  "printer": "P1S，来自对应历史打印记录；本次反馈未重述",
+  "material": "黑白 PLA，来自对应历史打印记录",
+  "slicing_parameters_source": "print/historical-feedback.json 与 model.json.printing；实际时间与耗材未记录",
+  "source": "Wind 在本任务中的反馈及三张实拍",
+  "results": {
+    "printing": "黑白零件与整机已完成",
+    "front_controls": "正常，用户确认",
+    "charging": "正常，用户确认",
+    "magnetic_closure": "有瑕疵：磁铁孔深度不足，热熔胶使磁铁外露，合壳不贴合",
+    "side_button": "有瑕疵：安装时不易按，容易掉落",
+    "other_functions": "正常，用户确认"
+  },
+  "issues": [
+    {
+      "expected": "胶固定后磁铁落座，前后壳贴合吸附",
+      "actual": "热熔胶垫高磁铁，外露后无法严丝合缝地吸附",
+      "cause": "用户指出孔深不足；实际胶层、磁铁外露量与孔深未测量",
+      "evidence": "2026-10-06 Wind 反馈；三张 v2 实拍作为装配与结构参考",
+      "next_change": "验证更深的磁铁座及胶层空间；另比较榫卯或卡扣连接方案",
+      "acceptance": "用实际磁铁与固定胶装配后检查落座、底壁厚度和合壳缝隙，再验证重复装取"
+    },
+    {
+      "expected": "侧键容易安装、按压并可靠保持",
+      "actual": "安装时不易按，容易掉落",
+      "cause": "安装和保持结构需改进，具体干涉及脱落原因尚未定位",
+      "evidence": "2026-10-06 Wind 反馈；背面实拍可见侧键开口，不作为操作测试的替代证据",
+      "next_change": "用局部试件比较安装路径、操作行程和防脱结构",
+      "acceptance": "装入、按压回位与保持效果分别测试，再做整机复测"
+    }
+  ],
+  "future_work": "优化方向仅记录为计划；本次发布 v2，未修改已有 CAD 或制造文件"
+}

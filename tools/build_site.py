@@ -39,7 +39,7 @@ for model in MODELS:
     release = model['release']
     if release['published']:
         assert release['makerworld_url'] and release['version'] and release['license'] and release['publication_authorized'], 'Published models require actual URL, version, chosen license and authorization'
-    status_text = ('已发布' if release['version'] == model['version'] else f"{release['version']} 已发布 · {model['version']} {model['status']}") if release['published'] else model['status']
+    status_text = (('已发布 · 有装配瑕疵' if model.get('known_issues') else '已发布') if release['version'] == model['version'] else f"{release['version']} 已发布 · {model['version']} {model['status']}") if release['published'] else model['status']
     assert slug == Path(slug).name and '..' not in slug
     source = ROOT / 'models' / slug
     target = OUT / 'assets/models' / slug
@@ -63,9 +63,10 @@ for model in MODELS:
     steps = ''.join(f'<li>{E(step)}</li>' for step in model['assembly_steps'])
     p = model['printing']
     print_spec = ''.join(f'<div><dt>{E(key)}</dt><dd>{E(value)}</dd></div>' for key,value in [('打印机 / 喷嘴', f"{p['printer']} / {p['nozzle']}"), ('层高',p['layer_height']), ('墙层', f"{p['walls']} 道"), ('填充',p['infill']), ('预计时间',p['estimated_time']), ('预计耗材',p['estimated_filament'])])
-    validation_titles = {'geometry':'几何完整性','fit_tests':'配合试件','white_plate':'白色盘打印','black_plate':'黑色盘打印','assembly':'完整装配'}
-    validations = ''.join(f'<li><span class="indicator {"pending" if "待" in text else ""}" aria-hidden="true"></span><span>{E(validation_titles[key])}<small>{E(text)}</small></span></li>' for key,text in model['validation'].items())
-    makerworld = f'<a class="action" href="{E(release["makerworld_url"])}" target="_blank" rel="noopener noreferrer">在 MakerWorld 查看 {E(release["version"] or "")} <span aria-hidden="true">↗</span></a>' if release['makerworld_url'] else '<p class="release-pending">MakerWorld · 发布准备中</p>'
+    validation_titles = {'geometry':'几何完整性','fit_tests':'配合试件','white_plate':'白色盘打印','black_plate':'黑色盘打印','assembly':'整机装配','controls':'按键与操作','charging':'充电','magnetic_closure':'磁吸合壳','side_button':'侧键安装与保持'}
+    validations = ''.join(f'<li><span class="indicator {"pending" if any(word in text for word in ("待", "瑕疵", "外露", "掉落")) else ""}" aria-hidden="true"></span><span>{E(validation_titles[key])}<small>{E(text)}</small></span></li>' for key,text in model['validation'].items())
+    release_caption = {'submission-unconfirmed':'提交结果待核实','under-review':'审核中'}.get(release.get('status'), '发布准备中')
+    makerworld = f'<a class="action" href="{E(release["makerworld_url"])}" target="_blank" rel="noopener noreferrer">在 MakerWorld 查看 {E(release["version"] or "")} <span aria-hidden="true">↗</span></a>' if release['makerworld_url'] else f'<p class="release-pending">MakerWorld · {E(release_caption)}</p>'
     files = ''
     download_dir = target / 'downloads'
     if release['license'] and release['publication_authorized']:
@@ -88,6 +89,9 @@ for model in MODELS:
     lessons = ''.join(f'<article><h3>{E(lesson["title"])}</h3><p>{E(lesson["text"])}</p></article>' for lesson in model.get('lessons', []))
     photo_items = ''.join(f'<figure><a href="{prefix}assets/models/{slug}/{E(Path(photo["path"]).name)}" target="_blank" rel="noopener noreferrer"><img src="{prefix}assets/models/{slug}/{E(Path(photo["path"]).name)}" alt="{E(photo["caption"])}" loading="lazy" width="{photo["width"]}" height="{photo["height"]}"></a><figcaption>{E(photo["caption"])}</figcaption></figure>' for photo in photos)
     photo_gallery = f'<section class="photo-section" aria-label="实物照片"><span class="eyebrow">PRINTED OBJECT / {E(model["version"])}</span><h2>打印出来的样子。</h2><div class="photo-gallery">{photo_items}</div><p class="fine">实拍照片。{E(model["images"].get("photo_note", ""))}</p></section>' if photos else ''
+    issues = model.get('known_issues', [])
+    issue_items = ''.join(f'<article><h3>{E(issue["title"])}</h3><p>{E(issue["effect"])}</p><p class="fine">后续计划：{E(issue["next"])}</p></article>' for issue in issues)
+    issue_notice = f'<section class="issue-notice" aria-label="已知装配问题"><span class="eyebrow">KNOWN ISSUES / {E(model["version"])}</span><h2>这版有 {len(issues)} 处装配问题。</h2><div class="issue-grid">{issue_items}</div><p class="fine">实物与功能已验证，下载仍为当前 {E(model["version"])}；后续优化尚未建模或打印。</p></section>' if issues else ''
     body = f'''
 <a class="back" href="{prefix}index.html#collection">← 返回作品集</a>
 <div class="product-heading"><div><span class="eyebrow">OBJECT {E(model['number'])} / {E(model['english_title'])}</span><h1>{E(model['title'])}</h1><p>{E(model['subtitle'])}</p></div><span class="pill">{E(status_text)}</span></div>
@@ -95,6 +99,7 @@ for model in MODELS:
 <model-viewer src="{prefix}assets/models/{slug}/display.glb" alt="{E(model['title'])}的可旋转 3D 模型，遥控器仅为适配展示" camera-controls touch-action="pan-y" camera-orbit="-150deg 72deg auto" shadow-intensity="0.8" exposure="1" interaction-prompt="none" poster="{prefix}{hero}"><img class="model-poster" slot="poster" src="{prefix}{hero}" alt="模型渲染预览"></model-viewer>
 <img class="fallback-art" data-fallback-art src="{prefix}{hero}" alt="模型渲染预览" hidden><img class="parts-art" data-parts-art src="{prefix}{parts}" alt="后壳、前框、独立面板的拆件渲染图" hidden><p class="stage-hint" data-stage-hint>拖动旋转 · 双指或滚轮缩放</p></div>
 <div class="stage-info"><span class="eyebrow" style="margin-bottom:12px">THE OBJECT</span><h2>复古轮廓，<br>日常用途。</h2><dl class="spec">{spec}</dl><p class="status-note">{E(model['images']['type'])}与 3D 预览。遥控器为适配参考，不属于打印零件。</p>{makerworld}<a class="release-link text-link" href="#printing">查看打印与装配说明 <span aria-hidden="true">↓</span></a></div></section>
+{issue_notice}
 {photo_gallery}
 <div class="detail-body"><nav class="detail-nav" aria-label="作品内容"><a href="#design">01 · 关于这件作品</a><a href="#validation">02 · 验证记录</a><a href="#printing">03 · 打印建议</a><a href="#assembly">04 · 装配</a><a href="#files">05 · 模型文件</a><a href="#iterations">06 · 版本与经验</a></nav><div>
 <section class="detail-section" id="design"><span class="eyebrow">01 / DESIGN NOTES</span><h2>细节，要经得起拿在手里。</h2><div class="features">{features}</div></section>

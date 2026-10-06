@@ -20,4 +20,12 @@
 .photo-gallery figure { margin: 0; }
 .photo-gallery img { width: 100%; height: auto; display: block; background: #e6e8dd; }
 .photo-gallery figcaption { margin-top: 12px; font-size: 13px; color: #72796c; }
+.photo-gallery figure:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.issue-notice { margin-top: 32px; padding: 32px; border: 1px solid #c5b989; background: #eee8d5; }
+.issue-notice h2 { font-size: clamp(24px, 3vw, 34px); margin: 14px 0 24px; }
+.issue-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.issue-grid h3 { font-size: 20px; margin-bottom: 12px; }
+.issue-grid p { font-size: 14px; }
+.issue-notice .fine { margin-top: 16px; }
+@media (max-width: 620px) { .issue-notice { padding: 24px; } .issue-grid { grid-template-columns: 1fr; gap: 24px; } }
 @media (max-width:620px) { .photo-gallery { grid-template-columns: 1fr; gap: 28px; } }

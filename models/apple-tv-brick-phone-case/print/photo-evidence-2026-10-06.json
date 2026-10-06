@@ -1,14 +1,14 @@
 {
   "received_date": "2026-10-06",
-  "model_version": null,
-  "version_note": "照片外观与此工程对应；新增拆解照片可用于核对内部限位与面板结构，最终版本归属仍待 Wind 确认。",
+  "model_version": "v2",
+  "version_note": "Wind 于 2026-10-06 确认本次反馈对应 v2。",
   "visible_observations": [
     "白色壳体与黑色面板、天线已打印",
     "遥控器已装入壳体，可见正面和背面外观",
     "拆解照片展示遥控器、前框及黑面板、后壳内腔和天线，可见内部限位、滑轨及磁铁位；不据此确认全部磁铁或侧键已安装"
   ],
-  "function_verification": "待 Wind 确认按键、充电、磁吸及装配状态",
-  "public_images": "第三张已转为 JPEG 并去除 EXIF 等元数据，保留图像像素与 ICC 配置，存放于 images/photos/2026-10-06-disassembled.jpg，并保存到 MakerWorld 草稿。前两张仍待本地裁剪及遮挡屏幕的处理方式确认；原始 HEIC 不放入公开仓库。",
+  "function_verification": "正面按键、充电及其他功能正常；磁吸合壳与侧键安装、防脱存在瑕疵，详见 feedback-v2-2026-10-06.json。",
+  "public_images": "Wind 已授权本地整理与必要美化。正背面已遮挡屏幕背景并整理构图、曝光；保留打印纹理与瑕疵。原始 HEIC 不入公开仓库。",
   "prepared_images": [
     {
       "path": "images/photos/2026-10-06-disassembled.jpg",
@@ -17,6 +17,46 @@
       "width": 5712,
       "height": 4284,
       "processing": "仅 HEIC 转 JPEG 与移除 EXIF/IPTC/XMP 元数据；无裁剪、遮挡或生成式修改；元数据清理前后 JPEG 解码像素与 ICC 一致"
+    },
+    {
+      "path": "images/photos/2026-10-06-front.jpg",
+      "source": "IMG_6637.HEIC",
+      "sha256": "9317ab84c07a7a5b9b4250ad1f983f53ea6599106a5dc0aa4796719714cf9d1d",
+      "width": 900,
+      "height": 1200,
+      "processing": "拆解图仅缩放；正背面及封面：方向校正、sRGB 转换、前景分离与背景遮挡、构图和曝光 1.10、压缩。保留原照片中的实物结构与纹理；无生成式修改；不含 EXIF/IPTC/XMP。"
+    },
+    {
+      "path": "images/photos/2026-10-06-rear.jpg",
+      "source": "IMG_6638.HEIC",
+      "sha256": "b433cc5d2fb12452b51f68c7e92181632eb4366d30476faed69e3e0060f08d25",
+      "width": 900,
+      "height": 1200,
+      "processing": "拆解图仅缩放；正背面及封面：方向校正、sRGB 转换、前景分离与背景遮挡、构图和曝光 1.10、压缩。保留原照片中的实物结构与纹理；无生成式修改；不含 EXIF/IPTC/XMP。"
+    },
+    {
+      "path": "images/photos/2026-10-06-disassembled-web.jpg",
+      "source": "IMG_6639.HEIC",
+      "sha256": "b2a3cdfa5d6b81fbbface642642244c5ae67cfce42811953a0dafe23d37fa54a",
+      "width": 1800,
+      "height": 1350,
+      "processing": "拆解图仅缩放；正背面及封面：方向校正、sRGB 转换、前景分离与背景遮挡、构图和曝光 1.10、压缩。保留原照片中的实物结构与纹理；无生成式修改；不含 EXIF/IPTC/XMP。"
+    },
+    {
+      "path": "images/photos/makerworld-cover-4x3.jpg",
+      "source": "IMG_6637.HEIC + IMG_6638.HEIC",
+      "sha256": "72e8f834508c9270d443829aa948f99a79f3abdcee46550e3b01923060c1c1dc",
+      "width": 1600,
+      "height": 1200,
+      "processing": "拆解图仅缩放；正背面及封面：方向校正、sRGB 转换、前景分离与背景遮挡、构图和曝光 1.10、压缩。保留原照片中的实物结构与纹理；无生成式修改；不含 EXIF/IPTC/XMP。"
+    },
+    {
+      "path": "images/photos/makerworld-cover-3x4.jpg",
+      "source": "IMG_6637.HEIC",
+      "sha256": "2f7edd9afe93be67183eda174d7c7816f3036ac90590fb1965a9de81b0b9a14b",
+      "width": 900,
+      "height": 1200,
+      "processing": "拆解图仅缩放；正背面及封面：方向校正、sRGB 转换、前景分离与背景遮挡、构图和曝光 1.10、压缩。保留原照片中的实物结构与纹理；无生成式修改；不含 EXIF/IPTC/XMP。"
     }
   ],
   "sources": [
@@ -38,5 +78,11 @@
       "bytes": 3253777,
       "sha256": "017a5abc6b5f2341b2e2bcd6a917a177d7950a6c59c53239d3923dacc54d4c45"
     }
-  ]
+  ],
+  "editing_authorization": {
+    "date": "2026-10-06",
+    "scope": "WindForge 上传的真实图片可做必要整理与美化；对当前本地裁剪和屏幕遮挡请求明确允许",
+    "preserve": "真实模型形状、装配关系、打印纹理及缺陷"
+  },
+  "processing_reference": "OpenCV GrabCut 官方说明：https://docs.opencv.org/4.13.0/d8/d83/tutorial_py_grabcut.html；人工限定前景范围，检查输出后公开。"
 }
