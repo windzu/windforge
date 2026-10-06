@@ -10,6 +10,8 @@
 
 网页 GLB 来自真实 Blender 工程，含非制造遥控器参考；下载则使用对应版本的制造 STL、通用 3MF 与编辑 STEP。通用 3MF 需要重新切片，不能冒充一键打印配置。网站支持已发布筛选，未发布作品明确展示准备状态。
 
+第三方模型收藏的数据入口为 `collections/catalogue.json`，生成 `/collections/` 独立页面。首页优先展示原创作品并保留收藏入口；收藏更新也触发 Pages 部署。空清单展示真实空状态，已有条目展示原作者、来源、用途、收藏理由和实际打印使用反馈。新增方式见 [收藏说明](../collections/README.md)。
+
 3D 预览组件为官方 `@google/model-viewer` 4.3.1，随站点保存以避免运行时 CDN 依赖，保留 Apache 2.0 许可。来源：https://modelviewer.dev/ 。
 
 ## MakerWorld 发布

@@ -4,7 +4,9 @@
 
 WindForge 是 Wind 的个人 3D 模型设计与打印仓库，用于积累作品，并与 AI 协同完成从需求、建模、迭代到实物验证和 MakerWorld 发布的全过程。
 
-[浏览作品站](https://windzu.github.io/windforge/) · [发布流程](docs/publishing.md)
+这里也精选来自其他创作者的模型，记录实用工具、结构参考、收藏理由与实际打印和使用经验。
+
+[浏览作品站](https://windzu.github.io/windforge/) · [模型收藏](https://windzu.github.io/windforge/collections/) · [发布流程](docs/publishing.md)
 
 ## 为什么建立这个仓库
 
@@ -25,7 +27,9 @@ WindForge 是 Wind 的个人 3D 模型设计与打印仓库，用于积累作品
 | 路径 | 用途 |
 | --- | --- |
 | `models/` | 每个模型一个独立目录，保存设计源文件、导出模型、图片和记录 |
+| `collections/` | 第三方模型收藏清单，记录原作者、来源、用途、收藏理由与打印使用反馈 |
 | `templates/model/README.md` | 新模型的需求、设计、打印与发布记录模板 |
+| `templates/collection.json` | 新收藏条目的信息模板 |
 | `docs/workflow.md` | 从开始设计到发布 MakerWorld 的协作流程 |
 | `AGENTS.md` | AI 在本仓库工作时需要遵循的项目背景与协作约定 |
 | `site/`、`tools/build_site.py` | 作品展示界面与静态网站生成器 |
@@ -52,6 +56,12 @@ WindForge 是 Wind 的个人 3D 模型设计与打印仓库，用于积累作品
 | [Apple TV 大哥大遥控器外壳](models/apple-tv-brick-phone-case/) | v2；保留 v1 迭代 | 实物与功能已验证；磁吸合壳和侧键有装配瑕疵 | 全球站等待实拍人工复核 |
 
 网站默认展示最新版本；仓库保留有价值的历史工程、问题、改动与实物反馈。作品许可在各模型目录中说明；本模型为 CC BY-NC 4.0，允许署名修改，禁止商用。第三方网站组件保留其原许可。
+
+## 模型收藏
+
+收藏作为独立栏目展示，主页优先介绍原创作品。每个收藏标明原作者与模型链接，记录用途、Wind 的选择理由以及「待打印／已打印／实际使用」状态。状态依据实际反馈填写。
+
+目前等待首批精选清单。新增收藏时填写 [信息模板](templates/collection.json)，加入 [收藏目录](collections/catalogue.json)；详细约定见 [收藏说明](collections/README.md)。默认保存链接与心得，开展二次设计时再核对原作许可，并关联参考来源与本仓库作品。
 
 ---
 

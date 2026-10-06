@@ -1,9 +1,11 @@
-"""Build the static portfolio from versioned model metadata; no Node build needed."""
+"""Build the static portfolio from versioned models and curated collections."""
 from pathlib import Path
 from html import escape
 import argparse
 import json
 import shutil
+import re
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -15,11 +17,16 @@ OUT.mkdir(parents=True, exist_ok=True)
 shutil.copytree(ROOT / 'site/assets', OUT / 'assets', dirs_exist_ok=True)
 MODELS = [json.loads(path.read_text()) for path in sorted((ROOT / 'models').glob('*/model.json'))]
 assert MODELS, 'No models in catalogue'
+catalogue = json.loads((ROOT / 'collections/catalogue.json').read_text())
+assert catalogue['schema_version'] == 1, 'Unsupported collection catalogue version'
+COLLECTIONS = catalogue['items']
+assert isinstance(COLLECTIONS, list), 'Collection items must be a list'
 E = lambda value: escape(str(value), quote=True)
 MARK = '<svg class="brand-mark" aria-hidden="true" viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#23352c"/><path d="M9 14l6 22h5l4-14 4 14h5l6-22h-6l-3 14-4-14h-4l-4 14-3-14z" fill="#d5da9b"/></svg>'
 
-def page(title, description, prefix, content, viewer=False):
+def page(title, description, prefix, content, viewer=False, active=None):
     script = f'<script type="module" src="{prefix}assets/vendor/model-viewer.min.js"></script>' if viewer else ''
+    current_collection = ' aria-current="page"' if active == 'collections' else ''
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(description)}"><meta name="theme-color" content="#f4f2eb">
@@ -28,10 +35,65 @@ def page(title, description, prefix, content, viewer=False):
 {script}<script defer src="{prefix}assets/site.js"></script></head><body>
 <a class="skip" href="#main">跳到正文</a><div class="wrap">
 <header class="nav"><a class="brand" href="{prefix}index.html" aria-label="WindForge 首页">{MARK}WindForge<span style="font-weight:400;color:#8b937b">.</span></a>
-<nav class="nav-links" aria-label="主导航"><a href="{prefix}index.html#collection">作品</a><a href="{prefix}index.html#about">关于工坊</a><a href="https://github.com/windzu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></header>
+<nav class="nav-links" aria-label="主导航"><a href="{prefix}index.html#collection">原创作品</a><a href="{prefix}collections/"{current_collection}>模型收藏</a><a href="{prefix}index.html#about">关于工坊</a><a href="https://github.com/windzu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></header>
 <main id="main">{content}</main>
 <footer class="footer"><span>© 2026 WindForge · Wind 的造物工坊</span><span>想法成形，实物验证。<span class="mono" style="margin-left:20px">DESIGNED & MADE BY WIND</span></span></footer>
 </div></body></html>'''
+
+COLLECTION_STATUSES = {'planned': '待打印', 'printed': '已打印', 'in-use': '实际使用'}
+
+def external_url(value):
+    parsed = urlsplit(value)
+    assert parsed.scheme in {'http', 'https'} and parsed.netloc and not parsed.username and not parsed.password, f'Invalid external URL: {value}'
+    return E(value)
+
+def collection_card(item):
+    slug = item['slug']
+    assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug), 'Collection slug must use lowercase letters, numbers and hyphens'
+    assert item['status'] in COLLECTION_STATUSES, 'Unknown collection status'
+    for value in (item['title'], item['author']['name'], item['source']['platform'], item['purpose'], item['reason']):
+        assert isinstance(value, str) and value.strip(), 'Missing collection attribution, purpose or reason'
+    feedback = item.get('feedback')
+    assert item['status'] == 'planned' or (isinstance(feedback, str) and feedback.strip()), 'Printed or used collections require actual feedback'
+    author = E(item['author']['name'])
+    if item['author'].get('url'):
+        author = f'<a href="{external_url(item["author"]["url"])}" target="_blank" rel="noopener noreferrer">{author} ↗</a>'
+    tags = ''.join(f'<span class="collection-tag">{E(tag)}</span>' for tag in item.get('tags', []))
+    feedback_html = f'<div class="collection-feedback"><h3>打印与使用反馈</h3><p>{E(feedback)}</p></div>' if feedback else ''
+    license_html = ''
+    if item.get('license'):
+        license_info = item['license']
+        license_name = E(license_info['name'])
+        if license_info.get('url'):
+            license_name = f'<a href="{external_url(license_info["url"])}" target="_blank" rel="noopener noreferrer">{license_name} ↗</a>'
+        checked = f' · {E(license_info["checked_date"])} 核对' if license_info.get('checked_date') else ''
+        license_html = f'<p class="fine">原作许可：{license_name}{checked}</p>'
+    related = []
+    for model_slug in item.get('related_models', []):
+        model = next((model for model in MODELS if model['slug'] == model_slug), None)
+        assert model, f'Unknown related model: {model_slug}'
+        related.append(f'<a href="../models/{E(model_slug)}/">{E(model["title"])} ↗</a>')
+    related_html = f'<p class="collection-related">相关原创作品：{" · ".join(related)}</p>' if related else ''
+    date = f'<time datetime="{E(item["collected_date"])}">{E(item["collected_date"])} 收藏</time>' if item.get('collected_date') else ''
+    return f'''<article class="collection-card" id="{E(slug)}">
+<div class="collection-card-top"><span class="eyebrow">{E(item['source']['platform'])} / {E(slug)}</span><span class="collection-status" data-status="{E(item['status'])}">{COLLECTION_STATUSES[item['status']]}</span></div>
+<h2>{E(item['title'])}</h2><p class="collection-author">原作者 · {author}</p><div class="collection-tags">{tags}</div>
+<dl class="collection-notes"><div><dt>用途</dt><dd>{E(item['purpose'])}</dd></div><div><dt>收藏理由</dt><dd>{E(item['reason'])}</dd></div></dl>{feedback_html}{related_html}{license_html}
+<div class="collection-card-bottom"><a class="text-link" href="{external_url(item['source']['url'])}" target="_blank" rel="noopener noreferrer">查看原作 <span aria-hidden="true">↗</span></a>{date}</div></article>'''
+
+def collection_content(items):
+    slugs = [item['slug'] for item in items]
+    assert len(slugs) == len(set(slugs)), 'Collection slugs must be unique'
+    cards = ''.join(collection_card(item) for item in items)
+    empty = '''<section class="collection-empty" aria-labelledby="collection-empty-title"><div class="collection-empty-copy"><svg class="bookmark-mark" aria-hidden="true" viewBox="0 0 64 64" fill="none"><path d="M19 12h26v41L32 44 19 53V12Z" stroke="currentColor" stroke-width="2"/><path d="M26 24h12M26 31h12" stroke="currentColor" stroke-width="2"/></svg><span class="eyebrow">THE FIRST FIND</span><h2 id="collection-empty-title">第一件收藏，还在挑选。</h2><p>实用的工具、巧妙的结构，或让人想亲手打印的作品。<br>选好之后，把来源与值得留下的理由写在这里。</p><a class="text-link" href="https://makerworld.com/en" target="_blank" rel="noopener noreferrer">去 MakerWorld 看看 <span aria-hidden="true">↗</span></a></div><div class="collection-status-guide"><h3>让收藏积累成经验。</h3><dl><div><dt>01 <span>待打印</span></dt><dd>记录用途、来源和收藏理由。</dd></div><div><dt>02 <span>已打印</span></dt><dd>补上真实打印结果与遇到的问题。</dd></div><div><dt>03 <span>实际使用</span></dt><dd>记录使用体验、局限和可以借鉴的细节。</dd></div></dl></div></section>'''
+    return f'''<a class="back" href="../index.html#collection">← 回到原创作品</a>
+<header class="collections-heading"><div><span class="eyebrow">SELECTED FROM OTHER MAKERS</span><h1>模型收藏</h1><p>实用的工具，值得研究的结构，以及想亲手打印的作品。</p></div><span class="collections-count"><strong>{len(items):02d}</strong> 件精选</span></header>
+<p class="collections-intro">来自其他创作者的好设计。每项标明原作者与来源，收藏理由和打印、使用反馈由 Wind 记录。</p>
+<div class="collection-grid">{cards}</div>{empty if not items else ''}'''
+
+collection_folder = OUT / 'collections'
+collection_folder.mkdir(parents=True, exist_ok=True)
+(collection_folder / 'index.html').write_text(page('模型收藏 · WindForge', 'Wind 精选的 3D 模型、实用工具与结构参考，保留原作者、收藏理由和打印使用反馈。', '../', collection_content(COLLECTIONS), active='collections'))
 
 rows = []
 for model in MODELS:
@@ -118,8 +180,9 @@ home_hero = f"assets/models/{featured['slug']}/{Path(featured['images']['hero'])
 home = f'''
 <section class="hero"><div class="hero-copy"><span class="eyebrow">A PERSONAL OBJECT WORKSHOP / EST. 2026</span><h1>把想法，<br>拿在手里。</h1><p>这里是 Wind 的造物工坊。<br>从日常灵感出发，和 AI 一起把想法做成模型，<br>再通过打印、使用与改进，让它成为实物。</p><a class="action" href="#collection">探索作品 <span aria-hidden="true">↓</span></a></div>
 <figure class="hero-art" style="margin:0"><a href="models/{featured['slug']}/" aria-label="查看{E(featured['title'])}"><img src="{home_hero}" alt="{E(featured['title'])} · {E(featured['images']['type'])}" width="1200" height="1400" fetchpriority="high"></a><figcaption class="image-caption"><span>{E(featured['number'])} / {E(featured['title'])}</span><span>{E(featured['images']['type'])} · {E(featured['version'])}</span></figcaption></figure></section>
-<section id="collection" aria-labelledby="collection-title"><div class="section-head"><div><span class="eyebrow">THE COLLECTION</span><h2 id="collection-title">工坊里的作品 <span class="mono" style="font-size:13px;color:#7c866e;vertical-align:super;margin-left:8px">{len(MODELS):02d}</span></h2></div><div class="filters" aria-label="作品状态筛选"><button data-filter="all" aria-pressed="true">全部作品</button><button data-filter="published" aria-pressed="false">已发布</button></div></div>{''.join(rows)}<p class="empty" data-empty hidden>目前还没有已发布的作品。完成发布后，会在这里展示。</p></section>
-<section class="about" id="about"><div><span class="eyebrow" style="display:block;margin-bottom:18px">ABOUT THE WORKSHOP</span><h2>Wind 的造物工坊。</h2></div><div><p>一个个人 3D 模型设计与打印项目。作品从具体需求和生活中的兴趣出发，留下可编辑的模型、设计取舍和实物反馈。</p><p>这个网站展示作品和制作记录；MakerWorld 承接模型发布与打印分享。每件作品都标明自己的版本与验证范围。</p></div></section>'''
+<section id="collection" aria-labelledby="collection-title"><div class="section-head"><div><span class="eyebrow">ORIGINAL OBJECTS</span><h2 id="collection-title">工坊里的原创作品 <span class="mono" style="font-size:13px;color:#7c866e;vertical-align:super;margin-left:8px">{len(MODELS):02d}</span></h2></div><div class="filters" aria-label="作品状态筛选"><button data-filter="all" aria-pressed="true">全部作品</button><button data-filter="published" aria-pressed="false">已发布</button></div></div>{''.join(rows)}<p class="empty" data-empty hidden>目前还没有已发布的作品。完成发布后，会在这里展示。</p></section>
+<section class="collections-teaser" aria-labelledby="collections-teaser-title"><div><span class="eyebrow">SELECTED FROM OTHER MAKERS</span><h2 id="collections-teaser-title">模型收藏 <span class="mono">{len(COLLECTIONS):02d}</span></h2></div><div><p>实用工具、结构参考与想要打印的好设计。<br>记录原作者、收藏理由，以及真实打印和使用反馈。</p>{'<p class="fine">首批收藏待加入。</p>' if not COLLECTIONS else ''}<a class="text-link" href="collections/">浏览模型收藏 <span aria-hidden="true">↗</span></a></div></section>
+<section class="about" id="about"><div><span class="eyebrow" style="display:block;margin-bottom:18px">ABOUT THE WORKSHOP</span><h2>Wind 的造物工坊。</h2></div><div><p>一个个人 3D 模型设计与打印项目。作品从具体需求和生活中的兴趣出发，留下可编辑的模型、设计取舍和实物反馈。</p><p>这里也精选来自其他创作者的模型，积累实用工具和结构参考，记录来源与自己的使用经验。</p><p>这个网站展示作品和制作记录；MakerWorld 承接模型发布与打印分享。每件原创作品都标明自己的版本与验证范围。</p></div></section>'''
 (OUT / 'index.html').write_text(page('WindForge · Wind 的造物工坊','把想法设计成模型，再把模型打印成实物。探索 Wind 的 3D 作品、制作记录与 MakerWorld 发布。','',home))
 (OUT / '.nojekyll').touch()
-print(f'Built {len(MODELS)} model page(s) and portfolio: {OUT}')
+print(f'Built {len(MODELS)} model page(s), {len(COLLECTIONS)} collection item(s) and portfolio: {OUT}')

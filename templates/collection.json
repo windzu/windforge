@@ -1,0 +1,20 @@
+{
+  "slug": "model-name",
+  "title": "模型名称",
+  "author": {
+    "name": "原作者名称",
+    "url": null
+  },
+  "source": {
+    "platform": "MakerWorld",
+    "url": "填入实际模型页面的 https 链接"
+  },
+  "purpose": "这个模型解决什么问题，适用于什么场景",
+  "reason": "Wind 为什么选择收藏，哪些细节值得使用或学习",
+  "status": "planned",
+  "tags": [],
+  "collected_date": null,
+  "feedback": null,
+  "license": null,
+  "related_models": []
+}
