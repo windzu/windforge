@@ -2,7 +2,7 @@
   "updated_date": "2026-10-06",
   "platform": "MakerWorld Global",
   "account": "windzu",
-  "status": "submission-unconfirmed",
+  "status": "under-review",
   "draft_url": "https://makerworld.com/en/my/models/drafts/9909258/edit",
   "version": "v2",
   "raw_files": 12,
@@ -43,8 +43,8 @@
   "real_photos_required": "至少 3 张打印实拍，覆盖 3 个视角",
   "china_sync": "Do not sync any models",
   "pending": [
-    "用户完成 MakerWorld 平台安全验证",
-    "核对平台提交结果与公开页面；发布后回填链接"
+    "等待平台审核",
+    "审核通过后核实公开页面，回填模型链接与 v2 发布状态"
   ],
   "covers_uploaded": [
     "4:3",
@@ -56,5 +56,13 @@
     "侧键安装时不易按，容易掉落"
   ],
   "submission_attempt_date": "2026-10-06",
-  "submission_result": "发布按钮未给出明确反馈；创作者中心出现平台安全验证，尚未核实公开状态"
+  "submission_result": "成功提交；账号显示 Verifying (1)、Draft (0)、Published Models (0)",
+  "submitted_date": "2026-10-06",
+  "status_url": "https://makerworld.com/en/@windzu/verifying",
+  "submission_route": "https://makerworld.com/en/my/models/drafts/9909258/publish",
+  "platform_counts": {
+    "published": 0,
+    "verifying": 1,
+    "draft": 0
+  }
 }

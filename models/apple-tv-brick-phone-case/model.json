@@ -94,8 +94,10 @@
     "publication_authorized": true,
     "platform": "MakerWorld Global",
     "version": null,
-    "status": "submission-unconfirmed",
-    "makerworld_china_url": null
+    "status": "under-review",
+    "makerworld_china_url": null,
+    "submitted_date": "2026-10-06",
+    "submission_status_url": "https://makerworld.com/en/@windzu/verifying"
   },
   "versions": [
     {

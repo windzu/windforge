@@ -1,6 +1,6 @@
 # MakerWorld Global · upload copy
 
-Status: complete global draft saved; publication result unconfirmed while the creator centre shows a security check. V2 print and functional feedback confirmed on 2026-10-06. This release retains the existing geometry and documents two known assembly issues.
+Status: submitted to MakerWorld Global on 2026-10-06. The platform shows Verifying (1), Draft (0); the model is under review and not yet public. V2 print and functional feedback confirmed on 2026-10-06. This release retains the existing geometry and documents two known assembly issues.
 
 ## Title
 
