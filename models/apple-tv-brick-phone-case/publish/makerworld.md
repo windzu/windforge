@@ -1,6 +1,6 @@
 # MakerWorld 发布材料 · 大哥大遥控器外壳 v2
 
-当前状态：本地材料已准备，未提交、未发布。Wind 已授权推进本作品发布，选择 MakerWorld 全球站优先与 CC BY-NC 4.0；待登录和实拍补充。英文描述见 `makerworld-en.md`。
+当前状态：全球站草稿已保存，尚未正式发布。12 个模型文件、两张模型渲染、中英描述与 CC BY-NC 4.0 已填入草稿；进度与编辑链接见 `progress.json`。收到正面、背面实拍，待确认照片对应版本、功能验证范围和公开图片处理方式；发布页还要求第三个视角的实拍。英文描述见 `makerworld-en.md`。
 
 ## 标题
 
@@ -45,7 +45,8 @@ Apple TV 大哥大遥控器外壳｜Siri Remote 第二代 Lightning｜黑白分�
 
 - 已有外观渲染：`images/04_front_perspective.png`。
 - 已有拆件渲染：`images/09_v2_separate_parts.png`。
-- 实物封面 / 装配照片：待 Wind 提供或确认已有文件位置。渲染不能标为实拍。
+- 已收到 `IMG_6637.HEIC` 正面与 `IMG_6638.HEIC` 背面照片；来源校验与观察记录见 `print/photo-evidence-2026-10-06.json`。照片背景含电脑屏幕内容，尚未公开上传。
+- 平台「Real life photos」明确要求至少 3 张实拍、覆盖 3 个视角；需再补一张侧面等新视角，不能将渲染或同一照片的裁剪算作第三个实拍视角。
 
 ## 许可与来源
 

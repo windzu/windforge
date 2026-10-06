@@ -1,0 +1,17 @@
+{
+  "updated_date": "2026-10-06",
+  "platform": "MakerWorld Global",
+  "account": "windzu",
+  "status": "draft-saved",
+  "draft_url": "https://makerworld.com/en/my/models/drafts/9909258/edit",
+  "version": "v2",
+  "raw_files": 12,
+  "license": "CC BY-NC 4.0",
+  "category": "Household / Other House Models",
+  "description_languages": ["en", "zh"],
+  "model_images": 2,
+  "real_photos_uploaded": 0,
+  "real_photos_required": "至少 3 张打印实拍，覆盖 3 个视角",
+  "china_sync": "Do not sync any models",
+  "pending": ["确认实拍对应版本及功能验证范围", "公开实拍前遮挡电脑屏幕内容", "补充第三个视角的实拍", "上传实拍和封面后提交发布"]
+}

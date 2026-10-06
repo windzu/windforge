@@ -44,14 +44,15 @@ for model in MODELS:
     source = ROOT / 'models' / slug
     target = OUT / 'assets/models' / slug
     target.mkdir(parents=True, exist_ok=True)
-    for image in [model['images']['hero'], model['images']['parts'], 'images/display.glb']:
+    photos = model['images'].get('photos', [])
+    for image in dict.fromkeys([model['images']['hero'], model['images']['parts'], 'images/display.glb'] + [photo['path'] for photo in photos]):
         file = source / image
         assert file.is_file(), f'Missing asset: {file}'
         shutil.copy2(file, target / file.name)
     hero = f"assets/models/{slug}/{Path(model['images']['hero']).name}"
     parts = f"assets/models/{slug}/{Path(model['images']['parts']).name}"
     rows.append(f'''<article class="project-row" data-project data-published="{str(release['published']).lower()}">
-<a class="project-image" href="models/{slug}/" aria-label="查看 {E(model['title'])}"><img src="{hero}" alt="{E(model['title'])}的实际模型渲染" width="1200" height="1400" loading="lazy"></a>
+<a class="project-image" href="models/{slug}/" aria-label="查看 {E(model['title'])}"><img src="{hero}" alt="{E(model['title'])} · {E(model['images']['type'])}" width="1200" height="1400" loading="lazy"></a>
 <div class="project-copy"><span class="eyebrow">OBJECT {E(model['number'])} / {E(model['category'])}</span><h3>{E(model['title'])}</h3><p>{E(model['summary'])}</p>
 <div class="project-meta"><span>{E(model['version'])}</span><span>{E(model['part_count'])} 个零件</span><span>{E(model['dimensions'])}</span></div>
 <span class="pill">{E(status_text)}</span><a class="text-link" style="margin-top:24px" href="models/{slug}/">走近这个作品 <span aria-hidden="true">↗</span></a></div></article>''')
@@ -85,6 +86,8 @@ for model in MODELS:
         license_note = '<p class="fine">现有文件：五个打印方向 STL、黑白两盘通用 3MF、STEP 装配与配合试件。</p>'
     versions = ''.join(f'<article class="version-entry"><div class="version-label"><span class="pill">{E(v["version"])}{" · 当前展示" if v["version"] == model["version"] else " · 历史版本"}</span><time>{E(v["date"])}</time></div><h3>{E(v["title"])}</h3><p>{E(v["changes"])}</p><p class="fine">{E(v["validation"])}</p><a class="text-link" href="https://github.com/windzu/windforge/tree/main/models/{E(slug)}/{E(v["files"])}" target="_blank" rel="noopener noreferrer">查看这版工程 ↗</a></article>' for v in model.get('versions', []))
     lessons = ''.join(f'<article><h3>{E(lesson["title"])}</h3><p>{E(lesson["text"])}</p></article>' for lesson in model.get('lessons', []))
+    photo_items = ''.join(f'<figure><a href="{prefix}assets/models/{slug}/{E(Path(photo["path"]).name)}" target="_blank" rel="noopener noreferrer"><img src="{prefix}assets/models/{slug}/{E(Path(photo["path"]).name)}" alt="{E(photo["caption"])}" loading="lazy" width="{photo["width"]}" height="{photo["height"]}"></a><figcaption>{E(photo["caption"])}</figcaption></figure>' for photo in photos)
+    photo_gallery = f'<section class="photo-section" aria-label="实物照片"><span class="eyebrow">PRINTED OBJECT / {E(model["version"])}</span><h2>打印出来的样子。</h2><div class="photo-gallery">{photo_items}</div><p class="fine">实拍照片。{E(model["images"].get("photo_note", ""))}</p></section>' if photos else ''
     body = f'''
 <a class="back" href="{prefix}index.html#collection">← 返回作品集</a>
 <div class="product-heading"><div><span class="eyebrow">OBJECT {E(model['number'])} / {E(model['english_title'])}</span><h1>{E(model['title'])}</h1><p>{E(model['subtitle'])}</p></div><span class="pill">{E(status_text)}</span></div>
@@ -92,6 +95,7 @@ for model in MODELS:
 <model-viewer src="{prefix}assets/models/{slug}/display.glb" alt="{E(model['title'])}的可旋转 3D 模型，遥控器仅为适配展示" camera-controls touch-action="pan-y" camera-orbit="-150deg 72deg auto" shadow-intensity="0.8" exposure="1" interaction-prompt="none" poster="{prefix}{hero}"><img class="model-poster" slot="poster" src="{prefix}{hero}" alt="模型渲染预览"></model-viewer>
 <img class="fallback-art" data-fallback-art src="{prefix}{hero}" alt="模型渲染预览" hidden><img class="parts-art" data-parts-art src="{prefix}{parts}" alt="后壳、前框、独立面板的拆件渲染图" hidden><p class="stage-hint" data-stage-hint>拖动旋转 · 双指或滚轮缩放</p></div>
 <div class="stage-info"><span class="eyebrow" style="margin-bottom:12px">THE OBJECT</span><h2>复古轮廓，<br>日常用途。</h2><dl class="spec">{spec}</dl><p class="status-note">{E(model['images']['type'])}与 3D 预览。遥控器为适配参考，不属于打印零件。</p>{makerworld}<a class="release-link text-link" href="#printing">查看打印与装配说明 <span aria-hidden="true">↓</span></a></div></section>
+{photo_gallery}
 <div class="detail-body"><nav class="detail-nav" aria-label="作品内容"><a href="#design">01 · 关于这件作品</a><a href="#validation">02 · 验证记录</a><a href="#printing">03 · 打印建议</a><a href="#assembly">04 · 装配</a><a href="#files">05 · 模型文件</a><a href="#iterations">06 · 版本与经验</a></nav><div>
 <section class="detail-section" id="design"><span class="eyebrow">01 / DESIGN NOTES</span><h2>细节，要经得起拿在手里。</h2><div class="features">{features}</div></section>
 <section class="detail-section" id="validation"><span class="eyebrow">02 / VALIDATION</span><h2>每一步验证，都留下记录。</h2><p class="body-copy">几何检查、局部试件、整机装配分别记录。下列状态对应本页的 {E(model['version'])} 版本。</p><ul class="validation-list">{validations}</ul></section>

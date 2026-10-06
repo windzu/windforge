@@ -1,0 +1,25 @@
+{
+  "received_date": "2026-10-06",
+  "model_version": null,
+  "version_note": "照片外观与此工程对应；v1/v2 内部限位与面板固定区别无法仅从这些照片确认。",
+  "visible_observations": [
+    "白色壳体与黑色面板、天线已打印",
+    "遥控器已装入壳体，可见正面和背面外观"
+  ],
+  "function_verification": "待 Wind 确认按键、充电、磁吸及装配状态",
+  "public_images": "待裁剪及遮挡屏幕的处理方式确认；原始 HEIC 不放入公开仓库",
+  "sources": [
+    {
+      "filename": "IMG_6637.HEIC",
+      "view": "front",
+      "bytes": 1816997,
+      "sha256": "993719edabf02f5441f9b713caf225b34fa940cc8d1c215e0628b145c7ad02fb"
+    },
+    {
+      "filename": "IMG_6638.HEIC",
+      "view": "rear",
+      "bytes": 2053352,
+      "sha256": "44b72439076fa0d807d05e16ea0c53528f6c3af0d85149022c0e14df48ac2b3f"
+    }
+  ]
+}
