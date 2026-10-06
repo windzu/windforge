@@ -10,8 +10,11 @@
   "category": "Household / Other House Models",
   "description_languages": ["en", "zh"],
   "model_images": 2,
-  "real_photos_uploaded": 0,
+  "real_photos_received": 3,
+  "real_photos_uploaded": 1,
+  "real_photo_views_received": ["front", "rear", "disassembled"],
+  "real_photo_uploads": [{"source": "IMG_6639.HEIC", "view": "disassembled", "file": "images/photos/2026-10-06-disassembled.jpg", "status": "draft-saved-and-reloaded"}],
   "real_photos_required": "至少 3 张打印实拍，覆盖 3 个视角",
   "china_sync": "Do not sync any models",
-  "pending": ["确认实拍对应版本及功能验证范围", "公开实拍前遮挡电脑屏幕内容", "补充第三个视角的实拍", "上传实拍和封面后提交发布"]
+  "pending": ["确认实拍对应版本及功能验证范围", "确认并处理前两张实拍的屏幕背景", "上传剩余两张实拍和封面后提交发布"]
 }

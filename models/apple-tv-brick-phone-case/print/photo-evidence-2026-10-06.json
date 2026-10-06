@@ -1,13 +1,24 @@
 {
   "received_date": "2026-10-06",
   "model_version": null,
-  "version_note": "照片外观与此工程对应；v1/v2 内部限位与面板固定区别无法仅从这些照片确认。",
+  "version_note": "照片外观与此工程对应；新增拆解照片可用于核对内部限位与面板结构，最终版本归属仍待 Wind 确认。",
   "visible_observations": [
     "白色壳体与黑色面板、天线已打印",
-    "遥控器已装入壳体，可见正面和背面外观"
+    "遥控器已装入壳体，可见正面和背面外观",
+    "拆解照片展示遥控器、前框及黑面板、后壳内腔和天线，可见内部限位、滑轨及磁铁位；不据此确认全部磁铁或侧键已安装"
   ],
   "function_verification": "待 Wind 确认按键、充电、磁吸及装配状态",
-  "public_images": "待裁剪及遮挡屏幕的处理方式确认；原始 HEIC 不放入公开仓库",
+  "public_images": "第三张已转为 JPEG 并去除 EXIF 等元数据，保留图像像素与 ICC 配置，存放于 images/photos/2026-10-06-disassembled.jpg，并保存到 MakerWorld 草稿。前两张仍待本地裁剪及遮挡屏幕的处理方式确认；原始 HEIC 不放入公开仓库。",
+  "prepared_images": [
+    {
+      "path": "images/photos/2026-10-06-disassembled.jpg",
+      "source": "IMG_6639.HEIC",
+      "sha256": "498b222a3d29d3ddb24224765d90c6d1f123498f210f3deaefdea0a2d852ea91",
+      "width": 5712,
+      "height": 4284,
+      "processing": "仅 HEIC 转 JPEG 与移除 EXIF/IPTC/XMP 元数据；无裁剪、遮挡或生成式修改；元数据清理前后 JPEG 解码像素与 ICC 一致"
+    }
+  ],
   "sources": [
     {
       "filename": "IMG_6637.HEIC",
@@ -20,6 +31,12 @@
       "view": "rear",
       "bytes": 2053352,
       "sha256": "44b72439076fa0d807d05e16ea0c53528f6c3af0d85149022c0e14df48ac2b3f"
+    },
+    {
+      "filename": "IMG_6639.HEIC",
+      "view": "disassembled",
+      "bytes": 3253777,
+      "sha256": "017a5abc6b5f2341b2e2bcd6a917a177d7950a6c59c53239d3923dacc54d4c45"
     }
   ]
 }
